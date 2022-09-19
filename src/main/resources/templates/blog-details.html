@@ -15,7 +15,9 @@
             <p th:text="${el.full_text}"></p>
             <p th:text="${el.views}"></p>
             <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">edit</a>
-            <a th:href="'/blog/' + ${el.id} + '/remove'" class="btn btn-warning">delete</a>
+            <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+                <button type="submit" class="btn btn-warning">delete</button>
+            </form>
         </div>
     </div>
     <div th:insert="blocks/footer :: footer"></div>

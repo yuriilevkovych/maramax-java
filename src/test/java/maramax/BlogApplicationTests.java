@@ -1,4 +1,4 @@
-package com.yurii.blog;
+package maramax;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

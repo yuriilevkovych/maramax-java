@@ -1,4 +1,4 @@
-package com.yurii.blog;
+package maramax;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

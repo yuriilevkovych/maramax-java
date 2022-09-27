@@ -1,6 +1,6 @@
-package com.yurii.blog.repositories;
+package maramax.repositories;
 
-import com.yurii.blog.models.Post;
+import maramax.models.Post;
 import org.springframework.data.repository.CrudRepository;
 
 public interface PostRepository extends CrudRepository<Post, Long> {

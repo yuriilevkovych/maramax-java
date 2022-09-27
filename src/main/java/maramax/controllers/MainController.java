@@ -1,4 +1,4 @@
-package com.yurii.blog.controllers;
+package maramax.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

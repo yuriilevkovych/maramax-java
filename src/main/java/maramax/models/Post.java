@@ -1,4 +1,4 @@
-package com.yurii.blog.models;
+package maramax.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

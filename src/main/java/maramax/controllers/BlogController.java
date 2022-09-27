@@ -1,7 +1,7 @@
-package com.yurii.blog.controllers;
+package maramax.controllers;
 
-import com.yurii.blog.models.Post;
-import com.yurii.blog.repositories.PostRepository;
+import maramax.models.Post;
+import maramax.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

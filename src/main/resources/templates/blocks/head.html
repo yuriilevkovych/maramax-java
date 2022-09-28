@@ -1,4 +1,4 @@
-<div th:fragment="head">
+<head th:fragment="head">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title th:text="${title}" />
@@ -10,5 +10,5 @@
     <link rel="shortcut icon" href="/img/favicons/favicon.ico">
 
     <link rel="stylesheet" href="/css/main.min.css">
-    <link rel="stylesheet" href="/css/index.min.css">
-</div>
+    <link rel="stylesheet" th:href="${style}">
+</head>

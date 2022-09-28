@@ -1,288 +1,536 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head th:insert="blocks/head :: head"></head>
-<body>
-<header class="header" th:insert="blocks/header :: header"></header>
-<main class="main">
-    <section class="intro">
-        <div class="container">
-            <div class="inner">
-                <div class="inner__column inner__column--first">
-                    <h1 class="section-title main-title">
-                        УПАКОВКА З КАРТОНУ ТА&nbsp;МIКРОГОФРОКАРТОНУ
-                    </h1>
-                    <div class="section-description">
-                        <div class="section-column section-column--first">
-                            <h2 class="section-subtitle">
-                                19 років лидери&nbsp;ринку
+    <head th:insert="blocks/head :: head"></head>
+    <body>
+        <header class="header" th:insert="blocks/header :: header"></header>
+
+        <main class="main">
+            <section class="intro">
+                <div class="container">
+                    <div class="inner">
+                        <h1 class="section-intro-title main-title">
+                            Про компанiю <br>
+                            Maramax
+                        </h1>
+                        <h2 class="section-intro-subtitle">
+                            19 років лидери&nbsp;ринку
+                        </h2>
+                        <p class="section-intro-text">
+                            Компанія працює в сегменті <span class="inline-block">business-to-business,</span> де є надійним постачальником для українських і Зарубіжних&nbsp;компаній.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="container">
+                    <div class="section-column section-column--content">
+                        <h2 class="section-title">
+                            Компанія ТОВ “MARAMAX”
+                        </h2>
+
+                        <p class="section-text">
+                            заснована в 2001-му році, спеціалізується на послугах з повного циклу виготовлення різноманітної продукції з картону та гофрокартону – упаковка, POS-матеріали, та інше (розробка конструкцій, макетів та дизайну, вибір матеріалу, друк, післядрукова обробка).
+                        </p>
+
+                        <p class="section-text">
+                            Компанія використовує креативні дизайнерські рішення для задоволення потреб замовників, пов’язаних з підвищенням конкурентоспроможності та ефективності діяльності. Всі наші клієнти отримують якісні індивідуальні варіанти вирішення їх запитів і потреб, починаючи з розробки ідеї і конструктиву, і закінчуючи постачанням готової продукції на склади клієнта
+                        </p>
+
+                        <p class="section-text">
+                            Вся продукція виробляється з кращих матеріалів вітчизняних та іноземних виробників. В основі нашого вибору постачальників сировини лежить бездоганна якість продукції, безперервність поставок. Наявні власні потужності з виробництва різних типів гофрокартону. Вся кінцева продукція виготовляється на власній виробничій базі, що безпосередньо впливає на вигідну цінову політику.
+                        </p>
+
+                        <p class="section-text">
+                            Компанія <strong>МАРАМАКС</strong> співпрацює з відомими компаніями різних галузей: харчова та кондитерська, парфюмерно-косметична, побутової хімії, алкогольна, фармацевтична, текстильна, товарів промислової групи. Виробництво компанії оснащене передовим сучасним обладнанням, це забезпечує найвищу якість всього циклу виробництва. В 2015-му році наша компанія увійшла до ПОЛЬСЬКО-УКРАЇНСЬКОЇ промислової палати.
+                        </p>
+                    </div>
+
+                    <div class="section-column section-column--decor">
+                        <img src="img/intro-book-image-mob.png" alt="Компанія ТОВ “MARAMAX” вступила у Польско -Українсько господарчої палати" class="section-image section-image--mob">
+                        <img src="img/intro-book-image-desk.png" alt="Компанія ТОВ “MARAMAX” вступила у Польско -Українсько господарчої палати" class="section-image section-image--desk">
+                    </div>
+                </div>
+            </section>
+
+            <section class="features features-top">
+                <div class="container">
+                    <div class="section-row">
+                        <div class="section-column section-column--two-items">
+                            <h2 class="section-title">
+                                Основними принципами роботи є
                             </h2>
-                            <p class="section-text">
-                                Компанія працює в сегменті <span class="inline-block">business-to-business,</span> де є надійним постачальником для українських і Зарубіжних&nbsp;компаній.
-                            </p>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Оперативність при здійсненні замовлення
+                                </li>
+                                <li class="list__item">
+                                    Повна конфіденційність і надійність в роботі
+                                </li>
+                                <li class="list__item">
+                                    Бездоганна якість
+                                </li>
+                                <li class="list__item">
+                                    Стабільність
+                                </li>
+                            </ul>
+                            <ul class="list">
+                                <li class="list__item">
+                                    Негайне реагування на будь-які питання
+                                </li>
+                                <li class="list__item">
+                                    Обробка запиту наших клієнтів в найкоротші терміни
+                                </li>
+                                <li class="list__item">
+                                    Індивідуальний підхід
+                                </li>
+                            </ul>
                         </div>
-                        <div class="section-column section-column--last">
-                            <img class="section-image" src="/img/intro-book-image-mob.png" alt="Maramax">
-                        </div>
-                    </div>
-                    <div class="section-actions">
-                        <button class="section-btn js-open-modal-form">
-                            Замовити
-                        </button>
-                    </div>
-                </div>
-                <div class="inner__column inner__column--last">
-                    <img class="section-image-desk" src="/img/intro-book-image-desk.png" alt="Maramax">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="products">
-        <div class="container">
-            <div class="cards">
-                <div class="cards__item cards__item--1">
-                    <a href="./product-1.html" class="cards__link"></a>
-                    <h2 class="cards__title">POS <br> Матеріали</h2>
-
-                    <div class="cards__decorate">
-                        <img src="/img/products-image-11.png" alt="Tuc" class="cards__image cards__image-1">
-                        <img src="/img/products-image-12.png" alt="Королівський смак" class="cards__image cards__image-2">
-                        <img src="/img/products-image-13.png" alt="Корона" class="cards__image cards__image-3">
-                    </div>
-                </div>
-                <div class="cards__inner">
-                    <div class="cards__item cards__item--2">
-                        <a href="./product-2.html" class="cards__link"></a>
-                        <h2 class="cards__title">Упаковка <br> Каширована</h2>
-
-                        <div class="cards__decorate">
-                            <img src="/img/products-image-21.png" alt="Наш сік" class="cards__image cards__image-1">
-                            <img src="/img/products-image-22.png" alt="Моршинська" class="cards__image cards__image-2">
-                            <img src="/img/products-image-23.png" alt="Jaffa" class="cards__image cards__image-3">
+                        <div class="section-column section-column--decor-first">
+                            <div class="section-decor">
+                                <img src="./img/about-man-img.png" alt="Основними принципами роботи є" class="section-decor__image">
+                            </div>
                         </div>
                     </div>
-                    <div class="cards__item cards__item--3">
-                        <a href="./product-3.html" class="cards__link"></a>
-                        <h2 class="cards__title">Упаковка <br> з&nbsp;картону</h2>
+                    <div class="section-row">
+                        <div class="section-column section-column--decor-second">
+                            <div class="section-decor">
+                                <img src="./img/about-door-first.png" alt="" class="section-decor__image section-decor__image--first">
+                                <img src="./img/about-door-second.png" alt="" class="section-decor__image section-decor__image--second">
+                            </div>
+                        </div>
+                        <div class="section-column section-column--two-items">
+                            <h2 class="section-title">
+                                Що ми враховуємо при виборі типу картону
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Властивості товару (вага, розмір тощо)
+                                </li>
+                                <li class="list__item">
+                                    Розробка конструкції, дизайну та вибір картону
+                                </li>
+                                <li class="list__item">
+                                    Призначення упаковки
+                                </li>
+                            </ul>
+                            <ul class="list">
+                                <li class="list__item">
+                                    Технологічні вимоги підприємства
+                                </li>
+                                <li class="list__item">
+                                    Співвідношення вартості товару до вартості упаковки.
+                                </li>
+                                <li class="list__item">
+                                    Тираж товару
+                                </li>
+                            </ul>
+                        </div>
 
-                        <div class="cards__decorate">
-                            <img src="/img/products-image-31.png" alt="Miracle" class="cards__image cards__image-1">
-                            <img src="/img/products-image-32.png" alt="Papa design" class="cards__image cards__image-2">
-                            <img src="/img/products-image-33.png" alt="Hard drink" class="cards__image cards__image-3">
+                    </div>
+                    <div class="section-row">
+                        <h2 class="section-title">
+                            Наше обладнення
+                        </h2>
+                        <ul class="list list--first-child">
+                            <li class="list__item">
+                                Офсетна листова друкарська машина Heildelberg SPEEDMASTER CD102, максимальний формат 720 х 1020 мм, 5 друкових секцій + ВД лак, продуктивністю 10 тис / год
+                            </li>
+                            <li class="list__item">
+                                Офсетна листова друкарська машина Планета Р 47, максимальний формат 900 х 1300 мм, 4 друкові секції
+                            </li>
+                            <li class="list__item">
+                                УФ лак
+                            </li>
+                            <li class="list__item">
+                                Каширувальний автомат
+                            </li>
+                            <li class="list__item">
+                                Ламінатор
+                            </li>
+                            <li class="list__item">
+                                Різалка
+                            </li>
+                            <li class="list__item">
+                                Машина для вклейки віконець
+                            </li>
+                        </ul>
+                        <ul class="list">
+                            <li class="list__item">
+                                Для висікання виробів на підприємстві встановлені
+                            </li>
+                            <li class="list__item">
+                                Brausse, форматом 750 х 1050 мм, продуктивністю 7 тис / год. (На машині також використовується конгревне тиснення)
+                            </li>
+                            <li class="list__item">
+                                Тигель форматів: 750 x 1050 мм, 900 x 1300 мм, 1300 x 1800 мм.
+                            </li>
+                            <li class="list__item">
+                                Дві фальцювально-склеюювальні машини, розраховані для склеювання продукції різної конфігурації
+                            </li>
+                            <li class="list__item">
+                                Флатовальна машина
+                            </li>
+                            <li class="list__item">
+                                Гофроагрегат
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slider-content">
+                <div class="container">
+                    <div href="./product-1.html" class="slider-arrow slider-arrow--prev" style="">
+                        <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1395 32L17.8083 30.3367L3.51832 16L17.8083 1.66332L16.1395 3.96059e-06L0.1916 16L16.1395 32Z" fill="#1B3C65"></path>
+                        </svg>
+                    </div>
+                    <div href="./product-3.html" class="slider-arrow slider-arrow--next" style="">
+                        <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.86047 -2.91785e-07L0.191651 1.66332L14.4817 16L0.191656 30.3367L1.86047 32L17.8084 16L1.86047 -2.91785e-07Z" fill="#1B3C65"></path>
+                        </svg>
+                    </div>
+                    <div class="slider slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 7884px; transform: translate3d(-876px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-1.png" alt="slide" class="slider__image">
+                    </div></div></div><div class="slick-slide slick-cloned" data-slick-index="15" aria-hidden="true" tabindex="-1" style="width: 438px;"><div><div class="slider__item" style="width: 100%; display: inline-block;">
+                        <img src="img/slide-img-2.png" alt="slide" class="slider__image">
+                    </div></div></div></div></div></div>
+                </div>
+            </section>
+
+            <section class="features features-bottom">
+                <div class="container">
+                    <div class="section-row">
+                        <h2 class="section-title">
+                            Наше виробництво
+                        </h2>
+                        <h3 class="section-subtitle">
+                            В компании MARAMAX свое производство, которое имеет в наличии оборудование европейских и азиатских производителей, что влияет на цену, качество и срок реализации продукции. На нашем производстве мы выполняем все технологические процессы по созданию полиграфической продукции: от флатовки и порезки сырья до сборки и доставки заказчику. На нашем производстве мы предоставляем такие услуги:
+                        </h3>
+                        <ul class="list list--three-items list--first-child">
+                            <li class="list__item">
+                                Підготовка до друку
+                            </li>
+                            <li class="list__item">
+                                Уривок і підготовка листів паперу до друку
+                            </li>
+                            <li class="list__item">
+                                Лакування
+                            </li>
+                            <li class="list__item">
+                                Каширування
+                            </li>
+                        </ul>
+                        <ul class="list list--three-items">
+                            <li class="list__item">
+                                Флотовка
+                            </li>
+                            <li class="list__item">
+                                Печатка
+                            </li>
+                            <li class="list__item">
+                                Ламінування
+                            </li>
+                            <li class="list__item">
+                                Висічка
+                            </li>
+                        </ul>
+                        <ul class="list list--three-items">
+                            <li class="list__item">
+                                Склеювання
+                            </li>
+                            <li class="list__item">
+                                Флотовка
+                            </li>
+                            <li class="list__item">
+                                Збірка, упаковка
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-row">
+                        <h2 class="section-title">
+                            Так само на виробництві є обладнання для виробництва металевих P.O.S матеріалів і ми можемо надавати такі послуги:
+                        </h2>
+                        <ul class="list list--three-items list--first-child">
+                            <li class="list__item">
+                                Розробка конструкції та підбір матеріалів
+                            </li>
+                            <li class="list__item">
+                                Термо-вакуумне формування пластика
+                            </li>
+                            <li class="list__item">
+                                Фрезерні роботи
+                            </li>
+                        </ul>
+                        <ul class="list list--three-items">
+                            <li class="list__item">
+                                Виправлення, разбухтовка, порізка дроту
+                            </li>
+                            <li class="list__item">
+                                Зварювальні роботи
+                            </li>
+                            <li class="list__item">
+                                Погибко листового металу, труби, дротяних і сіткових виробів
+                            </li>
+                        </ul>
+                        <ul class="list list--three-items">
+                            <li class="list__item">
+                                Полірозмірно-порошкове фарбування
+                            </li>
+                            <li class="list__item">
+                                Виконання ручних операцій з виготовлення POS матеріалів (збірка, термо-гнучка пластика, приклейка скотча, накочення самоклеючої плівки ORACAL та ін.)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-row">
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Підготовки до друку
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    На кожен колір виготовляється окрема форма, у тому числі для вибіркового лакування.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Друк
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Офсетний друк здійснюється на листових матеріалах. Можливий друк різними типами фарб. Якість друку залежить від якості картону, який використовується.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Когрев
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Додання рельєфності окремої частини зображення.
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="cards__item cards__item--4">
-                        <a href="./product-4.html" class="cards__link"></a>
-                        <h2 class="cards__title">Останнi <br> Проекти</h2>
+                    <div class="section-row">
+                        <h2 class="section-title">
+                            Лакування
+                        </h2>
+                        <ul class="list list--three-items list--first-child">
+                            <li class="list__item">
+                                Поліпшення виду картонної упаковки
+                            </li>
+                            <li class="list__item">
+                                Тип лаку вибирається залежно від технологічних і цінових вимог до упаковки.
+                            </li>
+                        </ul>
+                        <ul class="list list--three-items">
+                            <li class="list__item">
+                                Підвищення зносостійкості
+                            </li>
+                        </ul>
+                        <ul class="list list--three-items">
+                            <li class="list__item">
+                                Захист від вологи і подряпин
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="partners">
-        <div class="container">
-            <div class="cards">
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-1.svg" alt="CocaCola" class="cards__image cards__image--1">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-2.svg" alt="Loreal paris" class="cards__image cards__image--2">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-3.svg" alt="ABInBel" class="cards__image cards__image--3">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-4.svg" alt="BiC" class="cards__image cards__image--4">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-5.svg" alt="Mondelez International" class="cards__image cards__image--5">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-6.svg" alt="Pepsico" class="cards__image cards__image--6">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-7.svg" alt="Vitmark" class="cards__image cards__image--7">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-8.svg" alt="ecosoft" class="cards__image cards__image--8">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-9.svg" alt="FERERO ROCHER" class="cards__image cards__image--9">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-10.svg" alt="Carlsberg" class="cards__image cards__image--10">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-11.svg" alt="Nestle" class="cards__image cards__image--11">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-12.svg" alt="Рудь" class="cards__image cards__image--12">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-13.svg" alt="NIVEA" class="cards__image cards__image--13">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-14.svg" alt="IDS GROUP UKRAINE" class="cards__image cards__image--14">
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <div class="cards__decorate">
-                        <img src="/img/svg/partners-image-15.svg" alt="GLOBAL SPIRITS" class="cards__image cards__image--15">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="advantages">
-        <div class="container">
-            <div class="inner">
-                <h2 class="section-title">
-                    Переваги <span class="inline-block">працювати з нами</span>
-                </h2>
-
-                <div class="cards">
-                    <div class="cards__item">
-                        <div class="cards__decoration">
-                            <img src="/img/svg/advantages-image-1.svg" alt="Обладнення кращих світових виробників" class="cards__image cards__image--1">
+                    <div class="section-row">
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Каширування
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    На кожен колір виготовляється окрема форма, у тому числі для вибіркПри виготовленні упаковки з товстих багатошарових матеріалів типу мікрогофрокартону друк наноситься на окремий шар, який згодом приклеюється (каширується) на основний шарового лакування.
+                                </li>
+                            </ul>
                         </div>
-                        <p class="cards__description">
-                            Обладнення кращих світових виробників
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Ламiнування
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Захист упаковки від вологи. Тип плівки для ламінування визначається технологічними вимогами до упаковки
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Вклейки прозорих віконець
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Вклейки прозорих віконець
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-row">
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Упаковка
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Залежно від виду і розміру, готова продукція пакується в гофроящики або укладається на палету.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-column section-column--three-items">
+                            <h2 class="section-title">
+                                Виготовлення вирубних форм
+                            </h2>
+                            <ul class="list list--first-child">
+                                <li class="list__item">
+                                    Площадь вырубного штампа определяется площадью печатного листа.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-column section-column--three-items"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners">
+                <div class="container">
+                    <div class="cards">
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-1.svg" alt="CocaCola" class="cards__image cards__image--1">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-2.svg" alt="Loreal paris" class="cards__image cards__image--2">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-3.svg" alt="ABInBel" class="cards__image cards__image--3">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-4.svg" alt="BiC" class="cards__image cards__image--4">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-5.svg" alt="Mondelez International" class="cards__image cards__image--5">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-6.svg" alt="Pepsico" class="cards__image cards__image--6">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-7.svg" alt="Vitmark" class="cards__image cards__image--7">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-8.svg" alt="ecosoft" class="cards__image cards__image--8">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-9.svg" alt="FERERO ROCHER" class="cards__image cards__image--9">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-10.svg" alt="Carlsberg" class="cards__image cards__image--10">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-11.svg" alt="Nestle" class="cards__image cards__image--11">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-12.svg" alt="Рудь" class="cards__image cards__image--12">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-13.svg" alt="NIVEA" class="cards__image cards__image--13">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-14.svg" alt="IDS GROUP UKRAINE" class="cards__image cards__image--14">
+                            </div>
+                        </div>
+                        <div class="cards__item">
+                            <div class="cards__decorate">
+                                <img src="img/svg/partners-image-15.svg" alt="GLOBAL SPIRITS" class="cards__image cards__image--15">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sertificate">
+                <div class="container">
+                    <div class="section-column section-column--content">
+                        <h2 class="section-title">
+                            Компанія ТОВ “MARAMAX” вступила
+                            у Польско -Українсько господарчої палати
+                        </h2>
+                        <p class="section-text">
+                            Польсько-Українська Господарча Палата — організація, яка об’єднує польські та українські суб’єкти господарської діяльності, що зацікавлені співробітництвом, а також виробничою і науково-технічною діяльністю. Палата надає допомогу в кооперації фірм, презентації суб’єктів господарської діяльності обох держав.
                         </p>
                     </div>
-                    <div class="cards__item">
-                        <div class="cards__decoration">
-                            <img src="/img/svg/advantages-image-2.svg" alt="Виготовляеться на власному виробництві" class="cards__image cards__image--2">
-                        </div>
-                        <p class="cards__description">
-                            Виготовляеться на власному виробництві
-                        </p>
-                    </div>
-                    <div class="cards__item">
-                        <div class="cards__decoration">
-                            <img src="/img/svg/advantages-image-3.svg" alt="Адаптивне ціноутворювання" class="cards__image cards__image--3">
-                        </div>
-                        <p class="cards__description cards__description--small">
-                            Адаптивне ціноутворювання
-                        </p>
-                    </div>
-                    <div class="cards__item">
-                        <div class="cards__decoration">
-                            <img src="/img/svg/advantages-image-4.svg" alt="Обладнення кращих світових виробників" class="cards__image cards__image--4">
-                        </div>
-                        <p class="cards__description">
-                            Обладнення кращих світових виробників
-                        </p>
-                    </div>
-                    <div class="cards__item">
-                        <div class="cards__decoration">
-                            <img src="/img/svg/advantages-image-5.svg" alt="Креативні дизайнерські рішення" class="cards__image cards__image--5">
-                        </div>
-                        <p class="cards__description">
-                            Креативні <span class="inline-block">дизайнерські рішення</span>
-                        </p>
-                    </div>
-                    <div class="cards__item">
-                        <div class="cards__decoration">
-                            <img src="/img/svg/advantages-image-6.svg" alt="Якісні матеріали для виробництва продукції" class="cards__image cards__image--6">
-                        </div>
-                        <p class="cards__description">
-                            Якісні матеріали для&nbsp;виробництва продукції
-                        </p>
+                    <div class="section-column section-column--decor">
+                        <img src="img/sertificat.png" alt="Компанія ТОВ “MARAMAX” вступила у Польско -Українсько господарчої палати" class="section-image">
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-</main>
+            </section>
+        </main>
 
-<section class="section-form">
-    <div class="container">
-        <h2 class="section-title">
-            Якщо Залишилось питання
-        </h2>
-        <h3 class="section-subtitle">
-            Залиште заявку, ми з Вами зв'яжемося
-        </h3>
-        <form action="" class="form">
-            <div class="form__row">
-                <input class="form-input" id="name" name="name" type="text" required>
-                <label class="form-label" for="name">
-                    <span class="form-label--required">*</span>
-                    Введіть ваше ім'я
-                </label>
-            </div>
-            <div class="form__row">
-                <input class="form-input" id="email" name="email" type="email" required>
-                <label class="form-label" for="email"><span class="form-label--required">*</span> Введіть ваш Email</label>
-            </div>
-            <div class="form__row">
-                <input class="form-input js-form-tel" id="tel" name="tel" type="text" required>
-                <label class="form-label" for="tel"><span class="form-label--required">*</span> +3 8 0</label>
-            </div>
-            <div class="form__row form__row--select">
-                <select class="form-select" name="quantity" id="quantity">
-                    <option class="form-option" value="" hidden>
+        <footer class="footer">
+            <div th:insert="blocks/footer :: footer"></div>
+        </footer>
 
-                    </option>
-                    <option class="form-option" value="1">
-                        1
-                    </option>
-                    <option class="form-option" value="2">
-                        2
-                    </option>
-                    <option class="form-option" value="3">
-                        3
-                    </option>
-                    <option class="form-option" value="4">
-                        4
-                    </option>
-                </select>
-                <label class="form-label" for="quantity">Кількість одиниць</label>
-            </div>
-            <div class="form__row form__row--textarea">
-                <textarea class="form-textarea" name="message" id="message"></textarea>
-                <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
-            </div>
-            <div class="form__row form__row--submit">
-                <button type="submit" class="form-submit">
-                    Відправити запит
-                </button>
-            </div>
-        </form>
-    </div>
-</section>
-<footer class="footer">
-    <div th:insert="blocks/footer :: footer"></div>
-</footer>
-
-</body>
+    </body>
 </html>

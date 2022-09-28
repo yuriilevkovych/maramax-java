@@ -1,18 +1,288 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title th:text="${title}"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-</head>
+<!DOCTYPE html>
+<html lang="ru">
+<head th:insert="blocks/head :: head"></head>
 <body>
-<div class="container py-3">
-    <header th:insert="blocks/header :: header"></header>
-    <div class="container mt-5">
-        <h1>About</h1>
+<header class="header" th:insert="blocks/header :: header"></header>
+<main class="main">
+    <section class="intro">
+        <div class="container">
+            <div class="inner">
+                <div class="inner__column inner__column--first">
+                    <h1 class="section-title main-title">
+                        УПАКОВКА З КАРТОНУ ТА&nbsp;МIКРОГОФРОКАРТОНУ
+                    </h1>
+                    <div class="section-description">
+                        <div class="section-column section-column--first">
+                            <h2 class="section-subtitle">
+                                19 років лидери&nbsp;ринку
+                            </h2>
+                            <p class="section-text">
+                                Компанія працює в сегменті <span class="inline-block">business-to-business,</span> де є надійним постачальником для українських і Зарубіжних&nbsp;компаній.
+                            </p>
+                        </div>
+                        <div class="section-column section-column--last">
+                            <img class="section-image" src="/img/intro-book-image-mob.png" alt="Maramax">
+                        </div>
+                    </div>
+                    <div class="section-actions">
+                        <button class="section-btn js-open-modal-form">
+                            Замовити
+                        </button>
+                    </div>
+                </div>
+                <div class="inner__column inner__column--last">
+                    <img class="section-image-desk" src="/img/intro-book-image-desk.png" alt="Maramax">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="cards">
+                <div class="cards__item cards__item--1">
+                    <a href="./product-1.html" class="cards__link"></a>
+                    <h2 class="cards__title">POS <br> Матеріали</h2>
+
+                    <div class="cards__decorate">
+                        <img src="/img/products-image-11.png" alt="Tuc" class="cards__image cards__image-1">
+                        <img src="/img/products-image-12.png" alt="Королівський смак" class="cards__image cards__image-2">
+                        <img src="/img/products-image-13.png" alt="Корона" class="cards__image cards__image-3">
+                    </div>
+                </div>
+                <div class="cards__inner">
+                    <div class="cards__item cards__item--2">
+                        <a href="./product-2.html" class="cards__link"></a>
+                        <h2 class="cards__title">Упаковка <br> Каширована</h2>
+
+                        <div class="cards__decorate">
+                            <img src="/img/products-image-21.png" alt="Наш сік" class="cards__image cards__image-1">
+                            <img src="/img/products-image-22.png" alt="Моршинська" class="cards__image cards__image-2">
+                            <img src="/img/products-image-23.png" alt="Jaffa" class="cards__image cards__image-3">
+                        </div>
+                    </div>
+                    <div class="cards__item cards__item--3">
+                        <a href="./product-3.html" class="cards__link"></a>
+                        <h2 class="cards__title">Упаковка <br> з&nbsp;картону</h2>
+
+                        <div class="cards__decorate">
+                            <img src="/img/products-image-31.png" alt="Miracle" class="cards__image cards__image-1">
+                            <img src="/img/products-image-32.png" alt="Papa design" class="cards__image cards__image-2">
+                            <img src="/img/products-image-33.png" alt="Hard drink" class="cards__image cards__image-3">
+                        </div>
+                    </div>
+                    <div class="cards__item cards__item--4">
+                        <a href="./product-4.html" class="cards__link"></a>
+                        <h2 class="cards__title">Останнi <br> Проекти</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <div class="cards">
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-1.svg" alt="CocaCola" class="cards__image cards__image--1">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-2.svg" alt="Loreal paris" class="cards__image cards__image--2">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-3.svg" alt="ABInBel" class="cards__image cards__image--3">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-4.svg" alt="BiC" class="cards__image cards__image--4">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-5.svg" alt="Mondelez International" class="cards__image cards__image--5">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-6.svg" alt="Pepsico" class="cards__image cards__image--6">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-7.svg" alt="Vitmark" class="cards__image cards__image--7">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-8.svg" alt="ecosoft" class="cards__image cards__image--8">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-9.svg" alt="FERERO ROCHER" class="cards__image cards__image--9">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-10.svg" alt="Carlsberg" class="cards__image cards__image--10">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-11.svg" alt="Nestle" class="cards__image cards__image--11">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-12.svg" alt="Рудь" class="cards__image cards__image--12">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-13.svg" alt="NIVEA" class="cards__image cards__image--13">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-14.svg" alt="IDS GROUP UKRAINE" class="cards__image cards__image--14">
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__decorate">
+                        <img src="/img/svg/partners-image-15.svg" alt="GLOBAL SPIRITS" class="cards__image cards__image--15">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="container">
+            <div class="inner">
+                <h2 class="section-title">
+                    Переваги <span class="inline-block">працювати з нами</span>
+                </h2>
+
+                <div class="cards">
+                    <div class="cards__item">
+                        <div class="cards__decoration">
+                            <img src="/img/svg/advantages-image-1.svg" alt="Обладнення кращих світових виробників" class="cards__image cards__image--1">
+                        </div>
+                        <p class="cards__description">
+                            Обладнення кращих світових виробників
+                        </p>
+                    </div>
+                    <div class="cards__item">
+                        <div class="cards__decoration">
+                            <img src="/img/svg/advantages-image-2.svg" alt="Виготовляеться на власному виробництві" class="cards__image cards__image--2">
+                        </div>
+                        <p class="cards__description">
+                            Виготовляеться на власному виробництві
+                        </p>
+                    </div>
+                    <div class="cards__item">
+                        <div class="cards__decoration">
+                            <img src="/img/svg/advantages-image-3.svg" alt="Адаптивне ціноутворювання" class="cards__image cards__image--3">
+                        </div>
+                        <p class="cards__description cards__description--small">
+                            Адаптивне ціноутворювання
+                        </p>
+                    </div>
+                    <div class="cards__item">
+                        <div class="cards__decoration">
+                            <img src="/img/svg/advantages-image-4.svg" alt="Обладнення кращих світових виробників" class="cards__image cards__image--4">
+                        </div>
+                        <p class="cards__description">
+                            Обладнення кращих світових виробників
+                        </p>
+                    </div>
+                    <div class="cards__item">
+                        <div class="cards__decoration">
+                            <img src="/img/svg/advantages-image-5.svg" alt="Креативні дизайнерські рішення" class="cards__image cards__image--5">
+                        </div>
+                        <p class="cards__description">
+                            Креативні <span class="inline-block">дизайнерські рішення</span>
+                        </p>
+                    </div>
+                    <div class="cards__item">
+                        <div class="cards__decoration">
+                            <img src="/img/svg/advantages-image-6.svg" alt="Якісні матеріали для виробництва продукції" class="cards__image cards__image--6">
+                        </div>
+                        <p class="cards__description">
+                            Якісні матеріали для&nbsp;виробництва продукції
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="section-form">
+    <div class="container">
+        <h2 class="section-title">
+            Якщо Залишилось питання
+        </h2>
+        <h3 class="section-subtitle">
+            Залиште заявку, ми з Вами зв'яжемося
+        </h3>
+        <form action="" class="form">
+            <div class="form__row">
+                <input class="form-input" id="name" name="name" type="text" required>
+                <label class="form-label" for="name">
+                    <span class="form-label--required">*</span>
+                    Введіть ваше ім'я
+                </label>
+            </div>
+            <div class="form__row">
+                <input class="form-input" id="email" name="email" type="email" required>
+                <label class="form-label" for="email"><span class="form-label--required">*</span> Введіть ваш Email</label>
+            </div>
+            <div class="form__row">
+                <input class="form-input js-form-tel" id="tel" name="tel" type="text" required>
+                <label class="form-label" for="tel"><span class="form-label--required">*</span> +3 8 0</label>
+            </div>
+            <div class="form__row form__row--select">
+                <select class="form-select" name="quantity" id="quantity">
+                    <option class="form-option" value="" hidden>
+
+                    </option>
+                    <option class="form-option" value="1">
+                        1
+                    </option>
+                    <option class="form-option" value="2">
+                        2
+                    </option>
+                    <option class="form-option" value="3">
+                        3
+                    </option>
+                    <option class="form-option" value="4">
+                        4
+                    </option>
+                </select>
+                <label class="form-label" for="quantity">Кількість одиниць</label>
+            </div>
+            <div class="form__row form__row--textarea">
+                <textarea class="form-textarea" name="message" id="message"></textarea>
+                <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
+            </div>
+            <div class="form__row form__row--submit">
+                <button type="submit" class="form-submit">
+                    Відправити запит
+                </button>
+            </div>
+        </form>
     </div>
+</section>
+<footer class="footer">
     <div th:insert="blocks/footer :: footer"></div>
-</div>
+</footer>
 
 </body>
 </html>

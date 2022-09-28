@@ -1,15 +1,128 @@
-<div th:fragment="header">
-    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-            <span class="fs-4">Pricing example</span>
-        </a>
-
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-dark text-decoration-none" href="/">Main</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="/blog">Blog</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="/blog/add">Add post</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
-        </nav>
+<div class="container" th:fragment="header">
+    <a href="./index.html" class="section-logo">
+    </a>
+    <ul class="section-navigation hidden-desktop-md">
+        <li class="section-navigation__item">
+            <a href="./product-1.html" class="section-navigation__link link">
+                Продукція
+            </a>
+        </li>
+        <li class="section-navigation__item">
+            <a href="./about.html" class="section-navigation__link link">
+                Про компанiю
+            </a>
+        </li>
+        <li class="section-navigation__item">
+            <a href="./publications.html" class="section-navigation__link link">
+                Публикації
+            </a>
+        </li>
+        <li class="section-navigation__item">
+            <a href="./vacancies.html" class="section-navigation__link link">
+                Кар'єра
+            </a>
+        </li>
+        <li class="section-navigation__item">
+            <a href="./contact.html" class="section-navigation__link link">
+                Контакти
+            </a>
+        </li>
+    </ul>
+    <div class="section-contact">
+        +38 (063) 030-58-58
+    </div>
+    <div class="section-actions hidden-desktop-md">
+        <div class="feedback js-open-modal-form">
+            <svg class="feedback__image" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12.55 2.16667C12.5 2.90833 12.375 3.63333 12.175 4.325L13.175 5.325C13.5167 4.325 13.7333 3.26667 13.8083 2.16667H12.55ZM4.33333 12.1833C3.625 12.3833 2.9 12.5083 2.16667 12.5583V13.8C3.26667 13.725 4.325 13.5083 5.33333 13.175L4.33333 12.1833ZM11.75 0.5H14.6667C15.125 0.5 15.5 0.875 15.5 1.33333C15.5 9.15833 9.15833 15.5 1.33333 15.5C0.875 15.5 0.5 15.125 0.5 14.6667V11.7583C0.5 11.3 0.875 10.925 1.33333 10.925C2.36667 10.925 3.375 10.7583 4.30833 10.45C4.39167 10.4167 4.48333 10.4083 4.56667 10.4083C4.78333 10.4083 4.99167 10.4917 5.15833 10.65L6.99167 12.4833C9.35 11.275 11.2833 9.35 12.4833 6.99167L10.65 5.15833C10.4167 4.925 10.35 4.6 10.4417 4.30833C10.75 3.375 10.9167 2.375 10.9167 1.33333C10.9167 0.875 11.2917 0.5 11.75 0.5Z" fill="#68717D"/>
+            </svg>
+            <p class="feedback__text">
+                Зворотній зв’язок
+            </p>
+        </div>
+        <div class="switcher-lang">
+            <h2 class="switcher-lang__title">Укр</h2>
+            <ul class="switcher-lang__list">
+                <li class="switcher-lang__item">
+                    <a href="" class="switcher-lang__link">
+                        Укр
+                    </a>
+                </li>
+                <li class="switcher-lang__item">
+                    <a href="" class="switcher-lang__link">
+                        Рус
+                    </a>
+                </li>
+                <li class="switcher-lang__item">
+                    <a href="" class="switcher-lang__link">
+                        Англ
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="burger-menu">
+        <span class="burger-menu__line burger-menu__line--first"></span>
+        <span class="burger-menu__line burger-menu__line--second"></span>
+        <span class="burger-menu__line burger-menu__line--third"></span>
+        <span class="burger-menu__line burger-menu__line--fourth"></span>
+    </div>
+</div>
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <div class="feedback">
+        <svg class="feedback__image" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M12.55 2.16667C12.5 2.90833 12.375 3.63333 12.175 4.325L13.175 5.325C13.5167 4.325 13.7333 3.26667 13.8083 2.16667H12.55ZM4.33333 12.1833C3.625 12.3833 2.9 12.5083 2.16667 12.5583V13.8C3.26667 13.725 4.325 13.5083 5.33333 13.175L4.33333 12.1833ZM11.75 0.5H14.6667C15.125 0.5 15.5 0.875 15.5 1.33333C15.5 9.15833 9.15833 15.5 1.33333 15.5C0.875 15.5 0.5 15.125 0.5 14.6667V11.7583C0.5 11.3 0.875 10.925 1.33333 10.925C2.36667 10.925 3.375 10.7583 4.30833 10.45C4.39167 10.4167 4.48333 10.4083 4.56667 10.4083C4.78333 10.4083 4.99167 10.4917 5.15833 10.65L6.99167 12.4833C9.35 11.275 11.2833 9.35 12.4833 6.99167L10.65 5.15833C10.4167 4.925 10.35 4.6 10.4417 4.30833C10.75 3.375 10.9167 2.375 10.9167 1.33333C10.9167 0.875 11.2917 0.5 11.75 0.5Z" fill="#68717D"/>
+        </svg>
+        <p class="feedback__text js-open-modal-form">
+            Зворотній зв’язок
+        </p>
+    </div>
+    <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+            <a href="./product-1.html" class="mobile-menu__link">
+                Продукція
+            </a>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="./about.html" class="mobile-menu__link">
+                Про компанiю
+            </a>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="./publications.html" class="mobile-menu__link">
+                Публикації
+            </a>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="./vacancies.html" class="mobile-menu__link">
+                Ваканciї
+            </a>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="./contact.html" class="mobile-menu__link">
+                Контакти
+            </a>
+        </li>
+    </ul>
+    <div class="switcher-lang">
+        <h2 class="switcher-lang__title">Укр</h2>
+        <ul class="switcher-lang__list">
+            <li class="switcher-lang__item">
+                <a href="" class="switcher-lang__link">
+                    Укр
+                </a>
+            </li>
+            <li class="switcher-lang__item">
+                <a href="" class="switcher-lang__link">
+                    Рус
+                </a>
+            </li>
+            <li class="switcher-lang__item">
+                <a href="" class="switcher-lang__link">
+                    Англ
+                </a>
+            </li>
+        </ul>
     </div>
 </div>

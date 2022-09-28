@@ -1,39 +1,116 @@
 <div th:fragment="footer">
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-            <div class="col-12 col-md">
-                <img class="mb-2" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-                <small class="d-block mb-3 text-muted">© 2017–2022</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-                </ul>
+    <section class="section-about-us">
+        <div class="section-column section-column--map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5084.8487200532545!2d30.11587817906495!3d50.4145647046067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1579595646279!5m2!1sru!2sua" width="1920" height="520" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <div class="container">
+            <div class="section-column section-column--contact">
+                <div class="section-logo">
+                    <img class="section-logo__image" src="/img/svg/maramax-logo.svg" alt="maramax">
+                </div>
+                <h3 class="section-title">
+                    <span class="inline-block">Дизайн і виробництво</span>
+                    <span class="inline-block">картонної кашированої упаковки</span>
+                    <span class="inline-block">і POS-матеріалів усіх видів</span>
+                </h3>
+                <div class="contact">
+                    <p class="contact__tel">
+                        +38 (063) 030-58-58
+                    </p>
+                    <p class="contact__mail">
+                        office@maramax.kiev.ua
+                    </p>
+                    <p class="contact__address">
+                        08122, <br class="hidden-tablet">
+                        Киевская обл. <br class="hidden-mob"> с.Шпитьки,
+                        <span class="inline-block">ул. Хозяйственная, 10а</span>
+                    </p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+    <section class="section-copyright">
+        <div class="container">
+            <ul class="navigation hidden-mob">
+                <li class="navigation__item">
+                    <a href="./product-1.html" class="navigation__link link">Продукція</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./about.html" class="navigation__link link">Про компанiю</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./publications.html" class="navigation__link link">Публикації</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./vacancies.html" class="navigation__link link">Кар'єра</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./contact.html" class="navigation__link link">Контакти</a>
+                </li>
+            </ul>
+            <p class="copyright-text">
+                © 2019 <span class="hidden-mob">Всі права захищено</span> ТОВ "МАРАМАКС-ПАК".
+                <span class="inline-block">Розробленно в <a href="https://t.me/serg_designer">Papaya</a></span>
+            </p>
+        </div>
+    </section>
+    <div class="modal" id="form-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="modal__inner">
+                <button class="modal__close"></button>
+                <h2 class="section-title">
+                    Що вас цiкавить ?
+                </h2>
+                <h3 class="section-subtitle">
+                    Залиште заявку, ми з Вами зв'яжемося
+                </h3>
+                <form action="" class="form">
+                    <div class="form__row">
+                        <input class="form-input" id="form-name" name="name" type="text" required>
+                        <label class="form-label" for="form-name"><span class="form-label--required">*</span> Введіть ваше ім'я</label>
+                    </div>
+                    <div class="form__row">
+                        <input class="form-input" id="form-email" name="email" type="email" required>
+                        <label class="form-label" for="form-email"><span class="form-label--required">*</span> Введіть ваш Email</label>
+                    </div>
+                    <div class="form__row">
+                        <input class="form-input js-form-tel" id="form-tel" name="tel" type="text" required>
+                        <label class="form-label" for="form-tel"><span class="form-label--required">*</span> +3 8 0</label>
+                    </div>
+                    <div class="form__row form__row--select">
+                        <select class="form-select" name="quantity" id="form-quantity">
+                            <option class="form-option" value="" hidden>
+
+                            </option>
+                            <option class="form-option" value="1">
+                                1
+                            </option>
+                            <option class="form-option" value="2">
+                                2
+                            </option>
+                            <option class="form-option" value="3">
+                                3
+                            </option>
+                            <option class="form-option" value="4">
+                                4
+                            </option>
+                        </select>
+                        <label class="form-label" for="form-quantity">Кількість одиниць</label>
+                    </div>
+                    <div class="form__row form__row--textarea">
+                        <textarea class="form-textarea" name="message" id="form-message"></textarea>
+                        <label class="form-label form-label--custom" for="form-message">Введіть ваше повідомлення</label>
+                    </div>
+                    <div class="form__row form__row--submit">
+                        <button type="submit" class="form-submit">
+                            Відправити запит
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.min.js"></script>
+    <script src="/js/vendor.min.js"></script>
 </div>

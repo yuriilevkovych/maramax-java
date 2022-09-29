@@ -17,7 +17,6 @@ public class MainController {
     @GetMapping("/about")
     public String about(Model model) {
         model.addAttribute("title", "About Page");
-        //todo to add if empty
         model.addAttribute("style", "/css/about.min.css");
         model.addAttribute("script", "/js/about.min.js");
         return "about";
@@ -26,9 +25,16 @@ public class MainController {
     @GetMapping("/products")
     public String products(Model model) {
         model.addAttribute("title", "Products Page");
-        //todo to add if empty
         model.addAttribute("style", "/css/products.min.css");
         model.addAttribute("script", "/js/production.min.js");
         return "products";
+    }
+
+    @GetMapping("/publications")
+    public String publications(Model model) {
+        model.addAttribute("title", "publications Page");
+        //todo to add if empty
+        model.addAttribute("style", "/css/publications.min.css");
+        return "publications";
     }
 }

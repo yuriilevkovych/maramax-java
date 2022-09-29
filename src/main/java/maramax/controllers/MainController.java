@@ -45,4 +45,11 @@ public class MainController {
         model.addAttribute("script", "/js/vacancies.min.js");
         return "vacancies";
     }
+
+    @GetMapping("/contact")
+    public String contact(Model model) {
+        model.addAttribute("title", "contact Page");
+        model.addAttribute("style", "/css/contact.min.css");
+        return "contact";
+    }
 }

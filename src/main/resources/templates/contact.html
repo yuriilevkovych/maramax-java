@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <div th:replace="blocks/head :: head"></div>
+  <body>
+    <div th:replace="blocks/header :: header"></div>
+
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <h1 class="section-title main-title">
+            Контакты
+          </h1>
+
+          <div class="cards">
+            <div class="card">
+              <h2 class="card-title">
+                Логістика
+              </h2>
+              <a href="mailto:o.nesterchuk@maramax.kiev.ua" class="card-link">
+                o.nesterchuk@maramax.kiev.ua
+              </a>
+              <p class="card-tel">
+                +38 (063) 030-58-58
+              </p>
+            </div>
+
+            <div class="card">
+              <h2 class="card-title">
+                Бухгалтерія
+              </h2>
+              <a href="mailto:o.nesterchuk@maramax.kiev.ua" class="card-link">
+                o.nesterchuk@maramax.kiev.ua
+              </a>
+              <p class="card-tel">
+                +38 (044) 276-25-25
+              </p>
+            </div>
+
+            <div class="card">
+              <h2 class="card-title">
+                Комерційний відділ
+              </h2>
+              <a href="mailto: m.kysilov@maramax.kiev.ua" class="card-link">
+                m.kysilov@maramax.kiev.ua
+              </a>
+              <p class="card-tel">
+                +38 (063) 030-58-58
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div th:insert="blocks/footer :: footer"></div>
+    </footer>
+  </body>
+</html>

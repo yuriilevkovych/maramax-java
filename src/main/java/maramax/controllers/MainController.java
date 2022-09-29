@@ -3,7 +3,6 @@ package maramax.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -22,5 +21,14 @@ public class MainController {
         model.addAttribute("style", "/css/about.min.css");
         model.addAttribute("script", "/js/about.min.js");
         return "about";
+    }
+
+    @GetMapping("/products")
+    public String products(Model model) {
+        model.addAttribute("title", "Products Page");
+        //todo to add if empty
+        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("script", "/js/production.min.js");
+        return "products";
     }
 }

@@ -32,9 +32,17 @@ public class MainController {
 
     @GetMapping("/publications")
     public String publications(Model model) {
-        model.addAttribute("title", "publications Page");
+        model.addAttribute("title", "Publications Page");
         //todo to add if empty
         model.addAttribute("style", "/css/publications.min.css");
         return "publications";
+    }
+
+    @GetMapping("/vacancies")
+    public String vacancies(Model model) {
+        model.addAttribute("title", "Vacancies Page");
+        model.addAttribute("style", "/css/vacancies.min.css");
+        model.addAttribute("script", "/js/vacancies.min.js");
+        return "vacancies";
     }
 }

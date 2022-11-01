@@ -33,7 +33,7 @@ public class MainController {
     @GetMapping("/vacancies")
     public String vacancies(Model model) {
         model.addAttribute("title", "Vacancies Page");
-        model.addAttribute("style", "/css/vacancies.min.css");
+        model.addAttribute("style", "/css/vacancies.css");
         model.addAttribute("script", "/js/vacancies.min.js");
         return "vacancies";
     }

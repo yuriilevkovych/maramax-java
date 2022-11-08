@@ -44,7 +44,7 @@
         <div class="container">
             <ul class="navigation hidden-mob">
                 <li class="navigation__item">
-                    <a href="/products/pos-materials" class="navigation__link link">Продукція</a>
+                    <a href="/products" class="navigation__link link">Продукція</a>
                 </li>
                 <li class="navigation__item">
                     <a href="/about" class="navigation__link link">Про компанiю</a>
@@ -60,7 +60,7 @@
                 </li>
             </ul>
             <p class="copyright-text">
-                © 2019 <span class="hidden-mob">Всі права захищено</span> ТОВ "МАРАМАКС-ПАК".
+                © 2022 <span class="hidden-mob">Всі права захищено</span> ТОВ "МАРАМАКС-ПАК".
                 <span class="inline-block">Розробленно в <a href="https://t.me/serg_designer">Papaya</a></span>
             </p>
         </div>
@@ -71,7 +71,7 @@
             <div class="modal__inner">
                 <button class="modal__close"></button>
                 <h2 class="section-title">
-                    Що вас цiкавить ?
+                    Якщо Залишилось питання
                 </h2>
                 <h3 class="section-subtitle">
                     Залиште заявку, ми з Вами зв'яжемося
@@ -125,4 +125,8 @@
     <script src="/js/main.min.js"></script>
     <script th:src="${script}"></script>
     <script src="/js/vendor.min.js"></script>
+    <script>
+        var header = document.querySelector('.header');
+        header.removeAttribute('style');
+    </script>
 </div>

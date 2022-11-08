@@ -48,7 +48,7 @@ public class MainController {
     @GetMapping("/products/pos-materials")
     public String productsPosMaterials(Model model) {
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
         return "products/pos-materials.html";
     }
@@ -56,7 +56,7 @@ public class MainController {
     @GetMapping("/products/cashed")
     public String productsCashed(Model model) {
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
         return "products/cashed.html";
     }
@@ -64,7 +64,7 @@ public class MainController {
     @GetMapping("/products/cartboard")
     public String productsCartboard(Model model) {
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
         return "products/cartboard.html";
     }
@@ -72,7 +72,7 @@ public class MainController {
     @GetMapping("/products/corrugated-cartboard")
     public String productsCorrugatedCartboard(Model model) {
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
         return "products/corrugated-cartboard.html";
     }

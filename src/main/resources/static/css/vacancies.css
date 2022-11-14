@@ -226,6 +226,20 @@ html {
     padding-bottom: 20px;
     }
 
+    .content .section-item__description_p_contact {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        padding: 0px;
+    }
+
+    .content .section-item__titls_contact {
+        font-weight:500;
+        font-size:22px;
+        line-height:22px;
+        margin: 20p;
+        }
+
     .section-item__description_ul {
         /* font-size: 18px;
         font-weight: 300;

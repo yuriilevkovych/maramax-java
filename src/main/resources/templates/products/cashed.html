@@ -40,10 +40,10 @@
                 <div class="section-row">
                     <div class="item" th:each="product : ${products}">
                         <div class="item__decor">
-                            <img th:src="${product.src}" alt="" class="item__image" />
+                            <img th:src="${'/img/maramax-images-compressed/cashed/' + product.number + '.png'}" alt="" class="item__image" />
                         </div>
                         <h2 class="item__title"></h2>
-                        <p class="item__count" th:text="${product.id}"></p>
+                        <p class="item__count" th:text="${product.number}"></p>
                     </div>
                 </div>
 
@@ -87,12 +87,12 @@
                             <div class="slider__close"></div>
                             <div class="slide-row">
                                 <div class="slide-column slide-column--decor">
-                                    <img th:src="${product.src}" alt="" class="slide-image">
+                                    <img th:src="${'/img/maramax-images-compressed/cashed/' + product.number + '.png'}" alt="" class="slide-image">
                                 </div>
                                 <div class="slide-column slide-column--content">
                                     <h2 class="slide-title"></h2>
-                                    <div th:text="${product.id}" class="slide-count"></div>
-                                    <p class="slide-description"></p>
+                                    <div th:text="${product.number}" class="slide-count"></div>
+                                    <p class="slide-description" th:text="${product.description}"></p>
                                     <div class="slide-btn js-open-modal-form">
                                         Замовити
                                     </div>

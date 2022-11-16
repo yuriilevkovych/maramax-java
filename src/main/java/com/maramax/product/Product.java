@@ -1,15 +1,40 @@
 package com.maramax.product;
 
-public class Product {
-    Product(int id){
-        this.id = id;
-    }
-    final private int id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-    public int getId() {
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private Integer number;
+    private String description;
+
+    public Integer getId() {
         return id;
     }
-    public String getSrc() {
-        return "/img/maramax-images-compressed/cashed/" + this.id + ".png";
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

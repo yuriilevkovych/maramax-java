@@ -17,7 +17,7 @@ public class MainController {
     @GetMapping("/about")
     public String about(Model model) {
         model.addAttribute("title", "About Page");
-        model.addAttribute("style", "/css/about.min.css");
+        model.addAttribute("style", "/css/about.css");
         model.addAttribute("script", "/js/about.min.js");
         return "about";
     }

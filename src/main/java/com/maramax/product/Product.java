@@ -12,6 +12,7 @@ public class Product {
     private Integer id;
 
     private Integer number;
+    private String type;
     private String description;
 
     public Integer getId() {
@@ -30,6 +31,9 @@ public class Product {
         this.number = number;
     }
 
+    public String getType() {
+        return type;
+    }
     public String getDescription() {
         return description;
     }

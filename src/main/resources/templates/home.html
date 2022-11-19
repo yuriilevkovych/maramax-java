@@ -222,62 +222,8 @@
         </div>
       </section>
     </main>
-
     <section class="section-form">
-      <div class="container">
-        <h2 class="section-title">
-          Якщо Залишилось питання
-        </h2>
-        <h3 class="section-subtitle">
-          Залиште заявку, ми з Вами зв'яжемося
-        </h3>
-        <form action="" class="form">
-          <div class="form__row">
-            <input class="form-input" id="name" name="name" type="text" required>
-            <label class="form-label" for="name">
-              <span class="form-label--required">*</span>
-              Введіть ваше ім'я
-            </label>
-          </div>
-          <div class="form__row">
-            <input class="form-input" id="email" name="email" type="email" required>
-            <label class="form-label" for="email"><span class="form-label--required">*</span> Введіть ваш Email</label>
-          </div>
-          <div class="form__row">
-            <input class="form-input js-form-tel" id="tel" name="tel" type="text" required>
-            <label class="form-label" for="tel"><span class="form-label--required">*</span> +3 8 0</label>
-          </div>
-          <div class="form__row form__row--select">
-            <select class="form-select" name="quantity" id="quantity">
-              <option class="form-option" value="" hidden>
-
-              </option>
-              <option class="form-option" value="1">
-                1
-              </option>
-              <option class="form-option" value="2">
-                2
-              </option>
-              <option class="form-option" value="3">
-                3
-              </option>
-              <option class="form-option" value="4">
-                4
-              </option>
-            </select>
-            <label class="form-label" for="quantity">Кількість одиниць</label>
-          </div>
-          <div class="form__row form__row--textarea">
-            <textarea class="form-textarea" name="message" id="message"></textarea>
-            <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
-          </div>
-          <div class="form__row form__row--submit">
-            <button type="submit" class="form-submit">
-              Відправити запит
-            </button>
-          </div>
-        </form>
-      </div>
+      <div class="container" th:insert="blocks/callback-form :: callback"></div>
     </section>
     <footer class="footer" th:insert="blocks/footer :: footer"></footer>
   </body>

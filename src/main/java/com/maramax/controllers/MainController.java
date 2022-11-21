@@ -1,12 +1,15 @@
 package com.maramax.controllers;
 
 import com.maramax.callback.Callback;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
+    @Value("${upload.path}")
+    private String uploadPath;
 
     @GetMapping("/")
     public String home(Model model) {
@@ -20,6 +23,7 @@ public class MainController {
     @GetMapping("/about")
     public String about(Model model) {
         model.addAttribute("callback", new Callback());
+        model.addAttribute("uploadPath", uploadPath);
         model.addAttribute("title", "About Page");
         model.addAttribute("style", "/css/about.min.css");
         model.addAttribute("script", "/js/about.min.js");

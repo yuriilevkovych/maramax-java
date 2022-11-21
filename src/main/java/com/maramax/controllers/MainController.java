@@ -41,7 +41,7 @@ public class MainController {
     @GetMapping("/contact")
     public String contact(Model model) {
         model.addAttribute("title", "contact Page");
-        model.addAttribute("style", "/css/contact.min.css");
+        model.addAttribute("style", "/css/contact.css");
         return "contact";
     }
 }

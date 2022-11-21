@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <div th:replace="blocks/head :: head"></div>
+  <body>
+    <div th:replace="blocks/header :: header"></div>
+
+    <main class="main" th:each="publication : ${publication}">
+      <section class="intro">
+        <div class="container">
+          <div class="inner">
+            <h1 class="section-title main-title" th:text="${publication.title}"></h1>
+          </div>
+        </div>
+      </section>
+      <div th:utext="${publication.text}"></div>
+    </main>
+
+    <footer class="footer" th:insert="blocks/footer :: footer"></footer>
+  </body>
+</html>

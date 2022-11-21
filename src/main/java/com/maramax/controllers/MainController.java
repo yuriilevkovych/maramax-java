@@ -27,16 +27,6 @@ public class MainController {
         return "about";
     }
 
-    @GetMapping("/publications")
-    public String publications(Model model) {
-        model.addAttribute("callback", new Callback());
-        model.addAttribute("title", "Publications Page");
-        //todo to add if empty
-        model.addAttribute("style", "/css/publications.min.css");
-
-        return "publications";
-    }
-
     @GetMapping("/career")
     public String vacancies(Model model) {
         model.addAttribute("callback", new Callback());

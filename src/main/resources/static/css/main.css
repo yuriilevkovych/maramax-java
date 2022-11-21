@@ -213,6 +213,12 @@ html {
     .inline-block {
     display:inline-block
     }
+
+    .company-uppercase{
+    text-transform:uppercase;
+    letter-spacing: 10px
+    }
+
     
     .hidden-mob {
     display:none

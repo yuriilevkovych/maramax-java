@@ -81,63 +81,7 @@
                   </div>
 
               </div>
-              <div class="section-column section-column--form section-form">
-                <h2 class="section-title">
-                  Залишити резюме
-                </h2>
-                <form action="" class="form">
-                  <div class="form__row">
-                    <input class="form-input" id="name" name="name" type="text" required="">
-                    <label class="form-label" for="name"><span class="form-label--required">*</span> Введіть ваше ім'я</label>
-                  </div>
-                  <div class="form__row">
-                    <input class="form-input js-form-tel" id="tel" name="tel" type="text" required="" maxlength="14">
-                    <label class="form-label" for="tel"><span class="form-label--required">*</span> +3 8 0</label>
-                  </div>
-                  <div class="form__row">
-                    <input class="form-input" id="surname" name="surname" type="text" required="">
-                    <label class="form-label" for="surname"><span class="form-label--required">*</span> Фамiлiя</label>
-                  </div>
-
-                  <div class="form__row form__row--select">
-                    <select class="form-select" name="vacancies" id="vacancies">
-                      <option class="form-option" value="" hidden="">
-                      </option>
-                      <option class="form-option" value="1">
-                        Дизайнер графiчний
-                      </option>
-                      <option class="form-option" value="2">
-                        Менеджер
-                      </option>
-                      <option class="form-option" value="3">
-                        Системний адмiнiстратор
-                      </option>
-                    </select>
-                    <label class="form-label" for="vacancies">Вакансiя</label>
-                  </div>
-                  <div class="form__row form__row--textarea">
-                    <textarea class="form-textarea" name="message" id="message"></textarea>
-                    <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
-                  </div>
-                  <div class="form__row form__row--file">
-                    <div class="form__column">
-                      <input type="file" name="file" id="file" class="inputfile">
-                      <label class="form-label-file" for="file">Додати</label>
-                    </div>
-                    <div class="form__column">
-                      <p class="form__des">
-                        Заватажте ваше резюме <br>
-                        ( Docx, Doc, Txt, Pdf )
-                      </p>
-                    </div>
-                  </div>
-                  <div class="form__row form__row--submit">
-                    <button type="submit" class="form-submit">
-                      Відправити запит
-                    </button>
-                  </div>
-                </form>
-              </div>
+              <div class="section-column section-column--form section-form" th:insert="blocks/callback-form :: callback"></div>
             </div>
           </div>
         </div>

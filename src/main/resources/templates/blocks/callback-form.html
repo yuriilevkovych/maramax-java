@@ -1,0 +1,54 @@
+<div th:fragment="callback">
+    <h2 class="section-title">
+        Якщо Залишилось питання
+    </h2>
+    <h3 class="section-subtitle">
+        Залиште заявку, ми з Вами зв'яжемося
+    </h3>
+    <form action="#" th:action="@{/callback}" th:object="${callback}" method="post" class="form">
+        <div class="form__row">
+            <input class="form-input" id="name" name="name" type="text" th:field="*{name}" required>
+            <label class="form-label" for="name">
+                <span class="form-label--required">*</span>
+                Введіть ваше ім'я
+            </label>
+        </div>
+        <div class="form__row">
+            <input class="form-input" id="email" name="email" type="email" th:field="*{email}" required>
+            <label class="form-label" for="email"><span class="form-label--required">*</span> Введіть ваш Email</label>
+        </div>
+        <div class="form__row">
+            <input class="form-input js-form-tel" id="tel" name="tel" type="text" th:field="*{tel}" required>
+            <label class="form-label" for="tel"><span class="form-label--required">*</span> +3 8</label>
+        </div>
+        <div class="form__row form__row--select">
+            <select class="form-select" name="quantity" id="quantity" th:field="*{quantity}">
+                <option class="form-option" value="" hidden>
+
+                </option>
+                <option class="form-option" value="1000-3000">
+                    1000-3000
+                </option>
+                <option class="form-option" value="3000-5000">
+                    3000-5000
+                </option>
+                <option class="form-option" value="5000-10000">
+                    5000-10000
+                </option>
+                <option class="form-option" value="5000-10000">
+                    Більше 10000
+                </option>
+            </select>
+            <label class="form-label" for="quantity">Кількість одиниць</label>
+        </div>
+        <div class="form__row form__row--textarea">
+            <textarea class="form-textarea" name="message" id="message" th:field="*{message}"></textarea>
+            <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
+        </div>
+        <div class="form__row form__row--submit">
+            <button type="submit" class="form-submit">
+                Відправити запит
+            </button>
+        </div>
+    </form>
+</div>

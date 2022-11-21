@@ -1,4 +1,4 @@
-package com.maramax.product;
+package com.maramax.publication;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,14 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Product {
+public class Publication {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    private Integer number;
-    private String type;
+    private String slug;
+    private String title;
     private String description;
+    private String text;
 
     public Integer getId() {
         return id;
@@ -23,22 +23,35 @@ public class Product {
         this.id = id;
     }
 
-    public Integer getNumber() {
-        return number;
+    public String getSlug() {
+        return slug;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
-    public String getType() {
-        return type;
+    public String getTitle() {
+        return title;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

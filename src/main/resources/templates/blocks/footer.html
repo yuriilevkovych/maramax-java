@@ -53,7 +53,7 @@
                     <a href="/publications" class="navigation__link link">Публикації</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/vacancies" class="navigation__link link">Кар'єра</a>
+                    <a href="/career" class="navigation__link link">Кар'єра</a>
                 </li>
                 <li class="navigation__item">
                     <a href="/contact" class="navigation__link link">Контакти</a>
@@ -70,55 +70,7 @@
         <div class="modal__content">
             <div class="modal__inner">
                 <button class="modal__close"></button>
-                <h2 class="section-title">
-                    Якщо Залишилось питання
-                </h2>
-                <h3 class="section-subtitle">
-                    Залиште заявку, ми з Вами зв'яжемося
-                </h3>
-                <form action="" class="form">
-                    <div class="form__row">
-                        <input class="form-input" id="form-name" name="name" type="text" required>
-                        <label class="form-label" for="form-name"><span class="form-label--required">*</span> Введіть ваше ім'я</label>
-                    </div>
-                    <div class="form__row">
-                        <input class="form-input" id="form-email" name="email" type="email" required>
-                        <label class="form-label" for="form-email"><span class="form-label--required">*</span> Введіть ваш Email</label>
-                    </div>
-                    <div class="form__row">
-                        <input class="form-input js-form-tel" id="form-tel" name="tel" type="text" required>
-                        <label class="form-label" for="form-tel"><span class="form-label--required">*</span> +3 8 0</label>
-                    </div>
-                    <div class="form__row form__row--select">
-                        <select class="form-select" name="quantity" id="form-quantity">
-                            <option class="form-option" value="" hidden>
-
-                            </option>
-                            <option class="form-option" value="1">
-                                1
-                            </option>
-                            <option class="form-option" value="2">
-                                2
-                            </option>
-                            <option class="form-option" value="3">
-                                3
-                            </option>
-                            <option class="form-option" value="4">
-                                4
-                            </option>
-                        </select>
-                        <label class="form-label" for="form-quantity">Кількість одиниць</label>
-                    </div>
-                    <div class="form__row form__row--textarea">
-                        <textarea class="form-textarea" name="message" id="form-message"></textarea>
-                        <label class="form-label form-label--custom" for="form-message">Введіть ваше повідомлення</label>
-                    </div>
-                    <div class="form__row form__row--submit">
-                        <button type="submit" class="form-submit">
-                            Відправити запит
-                        </button>
-                    </div>
-                </form>
+                <div th:replace="blocks/callback-form :: callback"></div>
             </div>
         </div>
     </div>

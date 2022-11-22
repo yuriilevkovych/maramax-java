@@ -5,14 +5,17 @@
     <div th:replace="blocks/header :: header"></div>
 
     <main class="main" th:each="publication : ${publication}">
-      <section class="intro">
         <div class="container">
-          <div class="inner">
-            <h1 class="section-title main-title" th:text="${publication.title}"></h1>
+          <div class="section-column">
+            <h1 class="section__title" th:text="${publication.title}"></h1>
           </div>
         </div>
+      <section class="container">
+        <div class="section-text--decor">
+          <div class="section-text" th:utext="${publication.text}">
+        </div>
+      </div>
       </section>
-      <div th:utext="${publication.text}"></div>
     </main>
 
     <footer class="footer" th:insert="blocks/footer :: footer"></footer>

@@ -153,7 +153,7 @@ html {
     background-repeat:no-repeat;
     background-position:right top;
     background-color:#f9f7ef;
-    background-image:url(../img/maramax-images-compressed/кар`єра_mob.png),url(../img/svg/intro-vacancies-decor-mob.svg);
+    background-image:url(../img/maramax-images-compressed/career_mob.png),url(../img/svg/intro-vacancies-decor-mob.svg);
     background-size:cover,auto;
     padding:174px 50px 185px
     }
@@ -458,7 +458,7 @@ html {
     
     @media (min-width:768px) {
     .intro .inner {
-    background-image:url(../img/maramax-images-compressed/кар`єра_1.png),url(../img/svg/intro-vacancies-decor-desk.svg)
+    background-image:url(../img/maramax-images-compressed/career.png),url(../img/svg/intro-vacancies-decor-desk.svg)
     }
     }
     

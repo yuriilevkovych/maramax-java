@@ -23,7 +23,7 @@ public class MainController {
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("title", "Main Page");
-        model.addAttribute("style", "/css/index.min.css");
+        model.addAttribute("style", "/css/index.css");
 
         return "home";
     }

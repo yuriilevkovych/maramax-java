@@ -26,7 +26,7 @@ public class PublicationController {
         model.addAttribute("publications", publicationRepository.findAll());
         model.addAttribute("title", "Publications Page");
         //todo to add if empty
-        model.addAttribute("style", "/css/publications.min.css");
+        model.addAttribute("style", "/css/publications.css");
 
         return "publications";
     }
@@ -39,6 +39,7 @@ public class PublicationController {
 
         model.addAttribute("publication", publicationRepository.findBySlug(slug));
         model.addAttribute("title", "Publication Page");
+        model.addAttribute("style", "/css/publications.css");
 
         return "publication";
     }

@@ -1,223 +1,223 @@
 html {
     line-height:1.15;
     -webkit-text-size-adjust:100%
-    }
-    
-    body {
+}
+
+body {
     margin:0
-    }
-    
-    details,main {
+}
+
+details,main {
     display:block
-    }
-    
-    h1 {
+}
+
+h1 {
     font-size:2em;
     margin:.67em 0
-    }
-    
-    hr {
+}
+
+hr {
     box-sizing:content-box;
     height:0;
     overflow:visible
-    }
-    
-    code,kbd,pre,samp {
+}
+
+code,kbd,pre,samp {
     font-family:monospace,monospace;
     font-size:1em
-    }
-    
-    a {
+}
+
+a {
     background-color:transparent
-    }
-    
-    abbr[title] {
+}
+
+abbr[title] {
     border-bottom:none;
     text-decoration:underline;
     -webkit-text-decoration:underline dotted;
     text-decoration:underline dotted
-    }
-    
-    b,strong {
+}
+
+b,strong {
     font-weight:bolder
-    }
-    
-    small {
+}
+
+small {
     font-size:80%
-    }
-    
-    sub,sup {
+}
+
+sub,sup {
     font-size:75%;
     line-height:0;
     position:relative;
     vertical-align:baseline
-    }
-    
-    sub {
+}
+
+sub {
     bottom:-.25em
-    }
-    
-    sup {
+}
+
+sup {
     top:-.5em
-    }
-    
-    img {
+}
+
+img {
     border-style:none
-    }
-    
-    button,input,optgroup,select,textarea {
+}
+
+button,input,optgroup,select,textarea {
     font-family:inherit;
     font-size:100%;
     line-height:1.15;
     margin:0
-    }
-    
-    button,input {
+}
+
+button,input {
     overflow:visible
-    }
-    
-    button,select {
+}
+
+button,select {
     text-transform:none
-    }
-    
-    [type=button],[type=reset],[type=submit],button {
+}
+
+[type=button],[type=reset],[type=submit],button {
     -webkit-appearance:button
-    }
-    
-    [type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+}
+
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
     border-style:none;
     padding:0
-    }
-    
-    [type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+}
+
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
     outline:ButtonText dotted 1px
-    }
-    
-    fieldset {
+}
+
+fieldset {
     padding:.35em .75em .625em
-    }
-    
-    legend {
+}
+
+legend {
     box-sizing:border-box;
     color:inherit;
     display:table;
     max-width:100%;
     padding:0;
     white-space:normal
-    }
-    
-    progress {
+}
+
+progress {
     vertical-align:baseline
-    }
-    
-    textarea {
+}
+
+textarea {
     overflow:auto
-    }
-    
-    [type=checkbox],[type=radio] {
+}
+
+[type=checkbox],[type=radio] {
     box-sizing:border-box;
     padding:0
-    }
-    
-    [type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+}
+
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
     height:auto
-    }
-    
-    [type=search] {
+}
+
+[type=search] {
     -webkit-appearance:textfield;
     outline-offset:-2px
-    }
-    
-    [type=search]::-webkit-search-decoration {
+}
+
+[type=search]::-webkit-search-decoration {
     -webkit-appearance:none
-    }
-    
-    ::-webkit-file-upload-button {
+}
+
+::-webkit-file-upload-button {
     -webkit-appearance:button;
     font:inherit
-    }
-    
-    summary {
+}
+
+summary {
     display:list-item
-    }
-    
-    [hidden],template {
+}
+
+[hidden],template {
     display:none
-    }
-    
-    .intro .inner {
+}
+
+.intro .inner {
     background-repeat:no-repeat;
     background-position:left top;
     background-color:#f9f7ef;
-    background-image:url(../img/intro-publications.png);
+    background-image:url(../img/news.png.png);
     background-size:cover;
     padding:136px 30px 135px
-    }
-    
-    .intro .section-title {
+}
+
+.intro .section-title {
     width:100%;
     margin:0
-    }
-    
-    .sertificate .container {
+}
+
+.sertificate .container {
     padding-top:35px;
     padding-bottom:48px
-    }
-    
-    .sertificate .section-column--decor {
+}
+
+.sertificate .section-column--decor {
     line-height:0;
     margin-bottom:24px
-    }
-    
-    .sertificate .section-image {
+}
+
+.sertificate .section-image {
     display:block;
     width:100%;
     max-width:480px;
     margin-right:auto;
     margin-left:auto
-    }
-    
-    .sertificate .section-title {
+}
+
+.sertificate .section-title {
     margin-bottom:29px;
     font-weight:700;
     font-size:25px;
     line-height:30px
-    }
-    
-    .sertificate .section-text {
+}
+
+.sertificate .section-text {
     font-size:18px;
     line-height:25px;
     text-align:justify
-    }
-    
-    .publications .container {
+}
+
+.publications .container {
     padding-bottom:50px
-    }
-    
-    .publications .card {
+}
+
+.publications .card {
     margin-bottom:50px
-    }
-    
-    .publications .card-title {
+}
+
+.publications .card-title {
     margin-bottom:28px;
     font-weight:700;
     font-size:25px;
     line-height:30px
-    }
-    
-    .publications .card-link {
+}
+
+.publications .card-link {
     text-decoration:none;
     font-weight:inherit;
     font-size:inherit;
     line-height:inherit;
     color:inherit
-    }
-    
-    .publications .card-text {
+}
+
+.publications .card-text {
     font-size:18px;
     line-height:25px;
     text-align:justify
-    }
+}
 
     .section-text--decor{
     margin-bottom:60px
@@ -242,131 +242,131 @@ html {
     
     @media (min-width:1024px) {
     .intro .inner {
-    padding-left:50px;
-    background-image:url(../img/intro-publications-desk.png)
+        padding-left:50px;
+        background-image:url(../img/intro-publications-desk.png)
     }
-    
+
     .sertificate .container {
-    padding-top:50px;
-    padding-bottom:50px
+        padding-top:50px;
+        padding-bottom:50px
     }
-    
+
     .sertificate .section-title {
-    font-size:30px;
-    line-height:40px
+        font-size:30px;
+        line-height:40px
     }
-    
+
     .sertificate .section-text {
-    line-height:30px
+        line-height:30px
     }
-    
+
     .publications .card-title {
-    margin-bottom:20px;
-    font-size:30px;
-    line-height:40px;
-    -webkit-transition:.3s;
-    transition:.3s;
-    cursor:pointer
+        margin-bottom:20px;
+        font-size:30px;
+        line-height:40px;
+        -webkit-transition:.3s;
+        transition:.3s;
+        cursor:pointer
     }
-    
+
     .publications .card-title:hover {
-    color:#2e7cd3
+        color:#2e7cd3
     }
-    
+
     .publications .card-text {
-    line-height:30px
+        line-height:30px
     }
-    
+
     .card-text {
-    display:-webkit-box;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    -webkit-line-clamp:4;
-    -webkit-box-orient:vertical;
-    line-clamp:4
+        display:-webkit-box;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        -webkit-line-clamp:4;
+        -webkit-box-orient:vertical;
+        line-clamp:4
     }
-    }
-    
-    @media all and (-ms-high-contrast:none) and (min-width:1024px),(-ms-high-contrast:active) and (min-width:1024px) {
+}
+
+@media all and (-ms-high-contrast:none) and (min-width:1024px),(-ms-high-contrast:active) and (min-width:1024px) {
     .card-text {
-    max-height:120px;
-    overflow:hidden
+        max-height:120px;
+        overflow:hidden
     }
-    }
-    
-    @media (min-width:1250px) {
+}
+
+@media (min-width:1250px) {
     .sertificate .container {
-    width:100%;
-    padding-top:65px;
-    padding-bottom:65px;
-    display:-webkit-box;
-    display:flex;
-    -webkit-box-align:center;
-    align-items:center;
-    -webkit-box-pack:justify;
-    justify-content:space-between
+        width:100%;
+        padding-top:65px;
+        padding-bottom:65px;
+        display:-webkit-box;
+        display:flex;
+        -webkit-box-align:center;
+        align-items:center;
+        -webkit-box-pack:justify;
+        justify-content:space-between
     }
-    
+
     .sertificate .section-column--decor {
-    width:30%;
-    max-width:446px;
-    margin-left:-6px;
-    margin-bottom:0
+        width:30%;
+        max-width:446px;
+        margin-left:-6px;
+        margin-bottom:0
     }
-    
+
     .sertificate .section-column--content {
-    width:calc(70% - 50px)
+        width:calc(70% - 50px)
     }
-    
+
     .publications .container {
-    padding-bottom:70px;
-    width:100%;
-    display:-webkit-box;
-    display:flex;
-    flex-wrap:wrap;
-    -webkit-box-pack:justify;
-    justify-content:space-between
+        padding-bottom:70px;
+        width:100%;
+        display:-webkit-box;
+        display:flex;
+        flex-wrap:wrap;
+        -webkit-box-pack:justify;
+        justify-content:space-between
     }
-    
+
     .publications .card {
-    width:calc(50% - 25px)
+        width:calc(50% - 25px)
     }
-    }
-    
-    @media (min-width:1440px) {
+}
+
+@media (min-width:1440px) {
     .intro .inner {
-    padding-left:75px;
-    padding-top:195px;
-    padding-bottom:185px;
-    background-image:url(../img/intro-publications-desk.png),url(../img/svg/intro-publications-decor.svg);
-    background-size:cover,auto;
-    background-position:left top,right top
+        padding-left:75px;
+        padding-top:195px;
+        padding-bottom:185px;
+        background-image:url(../img/intro-publications-desk.png),url(../img/svg/intro-publications-decor.svg);
+        background-size:cover,auto;
+        background-position:left top,right top
     }
-    
+
     .sertificate .container {
-    padding-top:80px;
-    padding-bottom:80px
+        padding-top:80px;
+        padding-bottom:80px
     }
-    
+
     .sertificate .section-column--decor {
-    width:446px
+        width:446px
     }
-    
+
     .sertificate .section-column--content {
-    width:calc(100% - 50px - 446px)
+        width:calc(100% - 50px - 446px)
     }
-    
+
     .publications .card {
-    width:calc(50% - 40px)
+        width:calc(50% - 40px)
     }
-    }
-    
-    @media (min-width:1920px) {
+}
+
+@media (min-width:1920px) {
     .intro .inner {
-    padding-left:100px
+        padding-left:100px
     }
-    
+
     .publications .card {
-    width:calc(50% - 56px)
+        width:calc(50% - 56px)
     }
-    }
+}

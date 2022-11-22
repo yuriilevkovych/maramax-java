@@ -5,16 +5,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import java.time.Year;
 
 @Controller
 public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
+    @ModelAttribute
+    public void addAttributes(Model model) {
+        model.addAttribute("year", Year.now().getValue());
+        model.addAttribute("callback", new Callback());
+    }
+
     @GetMapping(value={"/products", "/products/pos-materials"})
     public String productsPosMaterials(Model model) {
         model.addAttribute("products", this.productRepository.findByType("pos-materials"));
-        model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
         model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
@@ -25,7 +33,6 @@ public class ProductController {
     @GetMapping("/products/cashed")
     public String productsCashed(Model model) {
         model.addAttribute("products", this.productRepository.findByType("cashed"));
-        model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
         model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
@@ -36,7 +43,6 @@ public class ProductController {
     @GetMapping("/products/cartboard")
     public String productsCartboard(Model model) {
         model.addAttribute("products", this.productRepository.findByType("cartboard"));
-        model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
         model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
@@ -47,7 +53,6 @@ public class ProductController {
     @GetMapping("/products/corrugated")
     public String productsCorrugatedCartboard(Model model) {
         model.addAttribute("products", this.productRepository.findByType("corrugated"));
-        model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
         model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");

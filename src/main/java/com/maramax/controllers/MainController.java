@@ -25,7 +25,7 @@ public class MainController {
         model.addAttribute("callback", new Callback());
         model.addAttribute("uploadPath", uploadPath);
         model.addAttribute("title", "About Page");
-        model.addAttribute("style", "/css/about.min.css");
+        model.addAttribute("style", "/css/about.css");
         model.addAttribute("script", "/js/about.min.js");
 
         return "about";
@@ -46,7 +46,7 @@ public class MainController {
     public String contact(Model model) {
         model.addAttribute("callback", new Callback());
         model.addAttribute("title", "contact Page");
-        model.addAttribute("style", "/css/contact.min.css");
+        model.addAttribute("style", "/css/contact.css");
 
         return "contact";
     }

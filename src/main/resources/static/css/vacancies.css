@@ -155,7 +155,7 @@ html {
     background-color:#f9f7ef;
     background-image:url(../img/intro-vacancies-mob.png),url(../img/svg/intro-vacancies-decor-mob.svg);
     background-size:cover,auto;
-    padding:174px 50px 198px
+    padding:174px 50px 185px
     }
     
     .intro .section-title {
@@ -225,6 +225,20 @@ html {
     padding-top: 20px;
     padding-bottom: 20px;
     }
+
+    .content .section-item__description_p_contact {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        padding: 0px;
+    }
+
+    .content .section-item__titls_contact {
+        font-weight:500;
+        font-size:22px;
+        line-height:22px;
+        margin: 20p;
+        }
 
     .section-item__description_ul {
         /* font-size: 18px;

@@ -16,7 +16,7 @@ public class ProductController {
         model.addAttribute("products", this.productRepository.findByType("pos-materials"));
         model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
 
         return "products/pos-materials";
@@ -27,7 +27,7 @@ public class ProductController {
         model.addAttribute("products", this.productRepository.findByType("cashed"));
         model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
 
         return "products/cashed";
@@ -38,7 +38,7 @@ public class ProductController {
         model.addAttribute("products", this.productRepository.findByType("cartboard"));
         model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
 
         return "products/cartboard";
@@ -49,7 +49,7 @@ public class ProductController {
         model.addAttribute("products", this.productRepository.findByType("corrugated"));
         model.addAttribute("callback", new Callback());
         model.addAttribute("title", "Products Page");
-        model.addAttribute("style", "/css/products.min.css");
+        model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");
 
         return "products/corrugated";

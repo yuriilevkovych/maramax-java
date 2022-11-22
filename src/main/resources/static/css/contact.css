@@ -208,6 +208,7 @@ html {
 
     .intro .card-title-name {
     display:block;
+    margin-top:30px;
     margin-bottom:30px;
     font-size:18px;
     line-height:24px;

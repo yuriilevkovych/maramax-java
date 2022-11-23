@@ -39,12 +39,12 @@ public class MainController {
     }
 
     @GetMapping("/career")
-    public String vacancies(Model model) {
+    public String career(Model model) {
         model.addAttribute("title", "Career Page");
         model.addAttribute("style", "/css/vacancies.css");
         model.addAttribute("script", "/js/vacancies.min.js");
 
-        return "/career";
+        return "career";
     }
 
     @GetMapping("/contact")

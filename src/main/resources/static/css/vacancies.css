@@ -302,7 +302,9 @@ html {
     .content .section-item__title {
     font-weight:700;
     font-size:30px;
-    line-height:35px
+    line-height:35px;
+    padding-top:20px;
+    padding-bottom:20px
     }
     
     .content .section-item__description {

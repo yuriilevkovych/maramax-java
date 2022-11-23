@@ -149,7 +149,7 @@ summary {
     background-repeat:no-repeat;
     background-position:left top;
     background-color:#f9f7ef;
-    background-image:url(../img/news.png.png);
+    background-image:url(../img/intro-publications.png),url(../img/news.png.png);
     background-size:cover;
     padding:136px 30px 135px
 }
@@ -338,7 +338,7 @@ summary {
         padding-left:75px;
         padding-top:195px;
         padding-bottom:185px;
-        background-image:url(../img/intro-publications-desk.png),url(../img/svg/intro-publications-decor.svg);
+        background-image:url(../img/intro-publications.png),url(../img/svg/intro-publications-decor.svg);
         background-size:cover,auto;
         background-position:left top,right top
     }

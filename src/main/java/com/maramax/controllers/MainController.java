@@ -1,6 +1,7 @@
 package com.maramax.controllers;
 
 import com.maramax.callback.Callback;
+import com.maramax.service.YearsLeadingCalculator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,8 +17,9 @@ public class MainController {
 
     @ModelAttribute
     public void addAttributes(Model model) {
-        model.addAttribute("year", Year.now().getValue());
         model.addAttribute("callback", new Callback());
+        model.addAttribute("year", Year.now().getValue());
+        model.addAttribute("yearsLeading", YearsLeadingCalculator.calculate());
     }
 
     @GetMapping("/")

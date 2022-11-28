@@ -23,6 +23,6 @@ public class CallbackService {
                 callback.getMessage()
         );
 
-        mailSenderService.sendEmail("yu.destroyer.ok@gmail.com", "Callback form Maramax", message);
+        mailSenderService.sendEmail("office@maramax.kiev.ua", "Callback form Maramax", message);
     }
 }

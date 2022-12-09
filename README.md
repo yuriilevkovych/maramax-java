@@ -3,6 +3,7 @@
     <li>Install docker</li>
     <li>docker-compose up -d</li>
     <li>docker exec -it maramax-java-db-1 bash</li>
+    <li>Create db and insert user-admin for auth</li>
 </ul>
 
 <h2>Authorization:</h2>

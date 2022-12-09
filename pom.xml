@@ -15,6 +15,9 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<webjars-locator.version>0.30</webjars-locator.version>
+		<bootstrap.version>4.0.0-2</bootstrap.version>
+		<lombok.version>1.18.2</lombok.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -66,6 +69,18 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${bootstrap.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>${webjars-locator.version}</version>
 		</dependency>
 	</dependencies>
 

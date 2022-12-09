@@ -1,0 +1,14 @@
+<div th:fragment="footer_admin">
+    <!--    footer here    -->
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script src="/js/summernote.min.js"></script>
+
+    <script>
+        $('#summernote-input').summernote({
+            height: 200
+        });
+    </script>
+</div>

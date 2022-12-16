@@ -1,4 +1,5 @@
 package com.maramax.admin.service;
+
 import com.maramax.admin.models.Role;
 import com.maramax.admin.models.User;
 import com.maramax.admin.models.UserDto;
@@ -43,7 +44,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findUserByEmail(String email) {
+    public User findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
@@ -55,9 +56,21 @@ public class UserServiceImpl implements UserService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public void deleteById(Long id) {
+        //Todo delete does not work because I have tables: roles_users and roles
+        User user = userRepository.getById(id);
+        if(user == null) {
+            throw new IllegalArgumentException("Invalid user Id:" + id);
+        }
+
+        userRepository.delete(user);
+    }
+
     private UserDto mapToUserDto(User user){
         UserDto userDto = new UserDto();
         String[] str = user.getName().split(" ");
+        userDto.setId(user.getId());
         userDto.setFirstName(str[0]);
         userDto.setLastName(str[1]);
         userDto.setEmail(user.getEmail());

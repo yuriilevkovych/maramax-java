@@ -3,6 +3,7 @@ package com.maramax.admin.controllers;
 import com.maramax.admin.models.User;
 import com.maramax.admin.models.UserDto;
 import com.maramax.admin.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -39,7 +40,7 @@ public class AuthController {
     public String registration(@Valid @ModelAttribute("user") UserDto userDto,
                                BindingResult result,
                                Model model){
-        User existingUser = userService.findUserByEmail(userDto.getEmail());
+        User existingUser = userService.findByEmail(userDto.getEmail());
 
         if(existingUser != null && existingUser.getEmail() != null && !existingUser.getEmail().isEmpty()){
             result.rejectValue("email", null,
@@ -55,14 +56,6 @@ public class AuthController {
         userService.saveUser(userDto);
 
         return "redirect:/admin/register?success";
-    }
-
-    @GetMapping("/admin/users")
-    public String users(Model model){
-        List<UserDto> users = userService.findAllUsers();
-        model.addAttribute("users", users);
-
-        return "admin/users";
     }
 
     @GetMapping("/admin/login")

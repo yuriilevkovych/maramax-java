@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div th:replace="admin/blocks/head_admin :: head_admin"></div>
+  <body>
+    <div th:replace="admin/blocks/header_admin :: header_admin"></div>
+
+    <form action="#" th:action="@{/admin/product/create}" enctype="multipart/form-data" method="post">
+      <label for="number">Number</label>
+      <input type="text" id="number" name="number" placeholder="number">
+<!--      <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}"></span>-->
+
+      <div th:each="type_variant : ${types}">
+        <input type="radio" name="type" placeholder="type" th:value="${type_variant}">
+        <label th:for="${type_variant}" th:text="${type_variant}"></label>
+      </div>
+<!--      <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span>-->
+
+      <label for="description">description</label>
+      <textarea name="description" id="description" placeholder="description"></textarea>
+<!--      <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>-->
+
+      <label for="filename">Image</label>
+      <input type="file" name="file" id="filename">
+<!--      <span th:if="${#fields.hasErrors('filename')}" th:errors="*{filename}"></span>-->
+
+      <input type="submit" value="Create product">
+    </form>
+
+<!--    <div th:if="${filename}">-->
+<!--      <img th:src="/img/${filename}" />-->
+<!--    </div>-->
+
+    <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+  </body>
+</html>

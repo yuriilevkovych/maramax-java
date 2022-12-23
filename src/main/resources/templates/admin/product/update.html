@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <div th:replace="admin/blocks/head_admin :: head_admin"></div>
+    <body>
+        <div th:replace="admin/blocks/header_admin :: header_admin"></div>
+
+        <form action="#" th:action="@{/admin/product/update/{id}(id=${product.id})}" th:object="${product}"
+              method="post">
+            <label for="number">Number</label>
+            <input type="text" th:field="*{number}" id="number" placeholder="number">
+            <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}"></span>
+
+            <div th:each="type_variant : ${types}">
+                <input type="radio" th:field="*{type}" placeholder="type" th:value="${type_variant}">
+                <label th:for="${type_variant}" th:text="${type_variant}"></label>
+            </div>
+            <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span>
+
+            <label for="description">description</label>
+            <textarea th:field="*{description}" id="description" placeholder="description"></textarea>
+            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+
+<!--            <label for="description">description</label>-->
+<!--            <textarea th:field="*{description}" id="description" placeholder="description"></textarea>-->
+<!--            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>-->
+
+            <input type="submit" value="Update product">
+        </form>
+
+        <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+    </body>
+</html>

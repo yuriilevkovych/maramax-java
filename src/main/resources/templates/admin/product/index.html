@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <body>
+  <div th:replace="admin/blocks/header_admin :: header_admin"></div>
+  <a th:href="${'/admin/product/create'}">create</a>
+
+  <div th:switch="${products}">
+    <h2 th:case="null">No products yet!</h2>
+    <div th:case="*">
+      <h2>product</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>number</th>
+          <th>type</th>
+          <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+          <td th:text="${product.id}"></td>
+          <td th:text="${product.number}"></td>
+          <td><a th:href="@{/products/{type}(type=${product.type.toLowerCase()})}" th:text="${product.type.toLowerCase()}"></a></td>
+          <td th:text="${product.description}"></td>
+          <td><a th:href="@{/admin/product/{id}(id=${product.id})}">Update</a></td>
+          <td><a th:href="@{/admin/product/delete/{id}(id=${product.id})}">Delete</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </body>
+</html>

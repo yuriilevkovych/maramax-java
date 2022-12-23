@@ -13,7 +13,7 @@
                             <path d="M16.1395 32L17.8083 30.3367L3.51832 16L17.8083 1.66332L16.1395 3.96059e-06L0.1916 16L16.1395 32Z" fill="#1B3C65"></path>
                         </svg> 
                     </a>
-                    <a href="/products/pos-materials" class="intro-arrow intro-arrow--next">
+                    <a href="/products/pos_materials" class="intro-arrow intro-arrow--next">
                         <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.86047 -2.91785e-07L0.191651 1.66332L14.4817 16L0.191656 30.3367L1.86047 32L17.8084 16L1.86047 -2.91785e-07Z" fill="#1B3C65"></path>
                         </svg>  
@@ -40,7 +40,7 @@
                 <div class="section-row">
                     <div class="item" th:each="product : ${products}">
                         <div class="item__decor">
-                            <img th:src="${'/img/maramax-images-compressed/corrugated/' + product.number + '.png'}" alt="" class="item__image" />
+                            <img th:src="${product.img_path}" alt="" class="item__image" />
                         </div>
                         <h2 class="item__title"></h2>
                         <p class="item__count" th:text="${product.number}"></p>

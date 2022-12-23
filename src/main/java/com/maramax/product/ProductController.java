@@ -12,7 +12,7 @@ import java.time.Year;
 
 @Controller
 public class ProductController {
-    private static final String DEFAULT_TYPE = "pos-materials";
+    private static final String DEFAULT_TYPE = "pos_materials";
 
     @Autowired
     private ProductRepository productRepository;
@@ -29,7 +29,7 @@ public class ProductController {
             type = DEFAULT_TYPE;
         }
 
-        model.addAttribute("products", this.productRepository.findByType(type));
+        model.addAttribute("products", this.productRepository.findByTypeOrderById(type.toUpperCase()));
         model.addAttribute("title", "Products Page");
         model.addAttribute("style", "/css/products.css");
         model.addAttribute("script", "/js/production.min.js");

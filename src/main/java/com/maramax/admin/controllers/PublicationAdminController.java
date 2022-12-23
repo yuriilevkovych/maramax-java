@@ -9,27 +9,29 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("/admin/publication")
 public class PublicationAdminController {
     @Autowired
     private PublicationRepository publicationRepository;
 
-    @GetMapping("/admin/publication")
+    @GetMapping
     public String publications(Model model) {
         model.addAttribute("publications", publicationRepository.findAll());
 
         return "admin/publication/index";
     }
 
-    @GetMapping("/admin/publication/create")
+    @GetMapping("create")
     public String createPublication(Publication publication) {
         return "admin/publication/create";
     }
 
-    @PostMapping("/admin/publication/create")
+    @PostMapping("create")
     public String create(@Valid Publication publication, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "/admin/publication/create";
@@ -42,7 +44,7 @@ public class PublicationAdminController {
         return "redirect:/admin/publication";
     }
 
-    @GetMapping("/admin/publication/update/{id}")
+    @GetMapping("update/{id}")
     public String update(@PathVariable(value = "id") Long id, Model model) {
         Publication publication = publicationRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid publication Id:" + id));
@@ -52,7 +54,7 @@ public class PublicationAdminController {
         return "admin/publication/update";
     }
 
-    @PostMapping("/admin/publication/update/{id}")
+    @PostMapping("update/{id}")
     public String update(@PathVariable(value = "id") Long id, @Valid Publication publication,
                          BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -66,7 +68,7 @@ public class PublicationAdminController {
         return "redirect:/admin/publication";
     }
 
-    @GetMapping("/admin/publication/delete/{id}")
+    @GetMapping("delete/{id}")
     public String delete(@PathVariable("id") long id, Model model) {
         Publication publication = publicationRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid publication Id:" + id));

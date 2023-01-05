@@ -4,25 +4,27 @@
     <body>
         <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
-        <form action="#" th:action="@{/admin/product/update/{id}(id=${product.id})}" th:object="${product}"
+        <form action="#" th:action="${'/admin/product/' + product.id}" th:object="${product}" enctype="multipart/form-data"
               method="post">
             <label for="number">Number</label>
-            <input type="text" th:field="*{number}" id="number" placeholder="number">
-            <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}"></span>
+            <input type="text" th:value="${product.number}" id="number" name="number">
+            <span th:if="${#fields.hasErrors('number')}" th:errors="${product.number}"></span>
 
             <div th:each="type_variant : ${types}">
-                <input type="radio" th:field="*{type}" placeholder="type" th:value="${type_variant}">
+                <input type="radio" th:field="${product.type}" placeholder="type" th:value="${type_variant}" name="type">
                 <label th:for="${type_variant}" th:text="${type_variant}"></label>
             </div>
-            <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span>
+<!--            <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span>-->
 
             <label for="description">description</label>
-            <textarea th:field="*{description}" id="description" placeholder="description"></textarea>
-            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
-
-<!--            <label for="description">description</label>-->
-<!--            <textarea th:field="*{description}" id="description" placeholder="description"></textarea>-->
+            <textarea th:field="${product.description}" id="description" placeholder="description" name="description"></textarea>
 <!--            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>-->
+
+            <label for="filename">Image</label>
+            <input type="file" name="file" id="filename">
+
+                <img th:src="${product.img_path}" th:field="${product.img_path}" />
+
 
             <input type="submit" value="Update product">
         </form>

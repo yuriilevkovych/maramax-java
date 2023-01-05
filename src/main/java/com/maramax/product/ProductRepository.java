@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
     Iterable<Product> findByTypeOrderById(String type);
-    List<Product> findAllByOrderByIdAsc();
+    List<Product> findAllByOrderByIdDesc();
 }

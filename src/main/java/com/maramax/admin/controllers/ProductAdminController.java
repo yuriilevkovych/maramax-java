@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/admin/product")
@@ -33,16 +34,43 @@ public class ProductAdminController {
     }
 
     @PostMapping("create")
-    public String create(
-            @RequestParam("number") Integer number,
-            @RequestParam("type") String type,
-            @RequestParam("description") String description,
-            @RequestParam("file") MultipartFile file) throws IOException {
+    public String create(@Valid Product product,
+                        BindingResult bindingResult,
+                        Model model,
+                        @RequestParam("file") MultipartFile file) throws IOException {
 
-        Product product = new Product(null, number, type, description, "");
-        product = productAdminService.create(product, file);
+        if (bindingResult.hasErrors()) {
+            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
+            model.mergeAttributes(errorsMap);
+            model.addAttribute("product", product);
+            model.addAttribute("types", Product.Types.values());
 
-        return "redirect:/admin/product";
+            return "/admin/product/create";
+        } else {
+            productAdminService.create(product, file);
+
+            return "redirect:/admin/product";
+        }
+    }
+
+    @PostMapping("{id}")
+    public String postUpdate(@PathVariable(value = "id") Long id,
+                             @Valid Product product,
+                             BindingResult bindingResult,
+                             Model model,
+                             @RequestParam("file") MultipartFile file) throws IOException {
+        if (bindingResult.hasErrors()) {
+            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
+            model.mergeAttributes(errorsMap);
+            model.addAttribute("product", product);
+            model.addAttribute("types", Product.Types.values());
+
+            return "/admin/product/" + id;
+        } else {
+            this.productAdminService.update(product, file);
+
+            return "redirect:/admin/product/" + id;
+        }
     }
 
     @GetMapping("{id}")
@@ -52,23 +80,6 @@ public class ProductAdminController {
         model.addAttribute("types", Product.Types.values());
 
         return "admin/product/update";
-    }
-
-    @PostMapping("{id}")
-    public String postUpdate(@PathVariable(value = "id") Long id,
-                             @Valid Product product,
-                             @RequestParam("file") MultipartFile file,
-                             BindingResult result,
-                             Model model) throws IOException {
-        if (result.hasErrors()) {
-            product.setId(id);
-
-            return "admin/product/edit";
-        }
-
-        this.productAdminService.update(product, file);
-
-        return "redirect:/admin/product";
     }
 
     @GetMapping("delete/{id}")

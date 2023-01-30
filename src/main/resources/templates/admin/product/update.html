@@ -6,25 +6,7 @@
 
         <form action="#" th:action="${'/admin/product/' + product.id}" th:object="${product}" enctype="multipart/form-data"
               method="post">
-            <label for="number">Number</label>
-            <input type="text" th:value="${product.number}" id="number" name="number">
-            <span th:if="${#fields.hasErrors('number')}" th:errors="${product.number}"></span>
-
-            <div th:each="type_variant : ${types}">
-                <input type="radio" th:field="${product.type}" placeholder="type" th:value="${type_variant}" name="type">
-                <label th:for="${type_variant}" th:text="${type_variant}"></label>
-            </div>
-<!--            <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span>-->
-
-            <label for="description">description</label>
-            <textarea th:field="${product.description}" id="description" placeholder="description" name="description"></textarea>
-<!--            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>-->
-
-            <label for="filename">Image</label>
-            <input type="file" name="file" id="filename">
-
-                <img th:src="${product.img_path}" th:field="${product.img_path}" />
-
+            <div th:replace="admin/product/form :: productform"></div>
 
             <input type="submit" value="Update product">
         </form>

@@ -46,7 +46,7 @@ public class ProductAdminService {
         return true;
     }
 
-    public boolean update(Product product, MultipartFile file) throws IOException {
+    public Product update(Product product, MultipartFile file) throws IOException {
         if (file != null && !file.getOriginalFilename().isEmpty()) {
             Product oldProduct = this.productRepository.findById(product.getId()).get();
             this.deleteImage(oldProduct);
@@ -55,7 +55,7 @@ public class ProductAdminService {
 
         productRepository.save(product);
 
-        return true;
+        return product;
     }
 
     private Product setProductImage(MultipartFile file, Product product) throws IOException {

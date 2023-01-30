@@ -1,0 +1,28 @@
+<div th:fragment="productform">
+    <div>
+        <label for="number">Number</label>
+        <input type="text" id="number" name="number" placeholder="number" th:value="${product.number}">
+        <span th:if="${numberError}" th:text="${numberError}"></span>
+    </div>
+
+    <div>
+        <div th:each="type_variant : ${types}">
+            <input type="radio" name="type" placeholder="type" th:value="${type_variant}" th:field="${product.type}">
+            <label th:for="${type_variant}" th:text="${type_variant}"></label>
+        </div>
+        <span th:if="${typeError}" th:text="${typeError}"></span>
+    </div>
+
+    <div>
+        <label for="description">description</label>
+        <textarea name="description" id="description" placeholder="description" th:text="${product.description}"></textarea>
+        <span th:if="${descriptionError}" th:text="${descriptionError}"></span>
+    </div>
+
+    <div>
+        <label for="filename">Image</label>
+        <input type="file" name="file" id="filename">
+        <img th:src="${product.img_path}" th:field="${product.img_path}" />
+        <span th:if="${fileError}" th:text="${fileError}"></span>
+    </div>
+</div>

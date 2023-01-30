@@ -1,1 +1,0 @@
-INSERT INTO public.users (id, email, name, password) VALUES (1, 'u@u.u', 'u u', '$2a$10$EPZcypDGOpnJ9aw4rmOXN.q24Tfac5DIPavZrPeZO3YieRBO/2JSC');

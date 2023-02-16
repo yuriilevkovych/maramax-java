@@ -12,8 +12,6 @@ import java.time.Year;
 
 @Controller
 public class ProductController {
-    private static final String DEFAULT_TYPE = "pos_materials";
-
     @Autowired
     private ProductRepository productRepository;
 
@@ -26,7 +24,7 @@ public class ProductController {
     @GetMapping(value={"/products", "/products/{type}"})
     public String productsPosMaterials(@PathVariable(value = "type") String type, Model model) {
         if (type == null) {
-            type = DEFAULT_TYPE;
+            type = Product.Types.POS_MATERIALS.name().toLowerCase();
         }
 
         model.addAttribute("products", this.productRepository.findByTypeOrderById(type.toUpperCase()));

@@ -23,9 +23,9 @@ public class ProductController {
 
     @GetMapping(value={"/products", "/products/{type}"})
     public String productsPosMaterials(@PathVariable(value = "type") String type, Model model) {
-        if (type == null) {
-            type = Product.Types.POS_MATERIALS.name().toLowerCase();
-        }
+//        if (type == null) {
+//            type = Product.Types.POS_MATERIALS.name().toLowerCase();
+//        }
 
         model.addAttribute("products", this.productRepository.findByTypeOrderById(type.toUpperCase()));
         model.addAttribute("title", "Products Page");

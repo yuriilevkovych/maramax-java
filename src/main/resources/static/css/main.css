@@ -671,6 +671,12 @@ br {
     margin-bottom:20px
 }
 
+.modal .form__row--center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .modal .form__row--submit {
     margin-bottom:0;
     text-align:center
@@ -808,6 +814,12 @@ br {
 
 .section-form .form__row--textarea {
     margin-bottom:20px
+}
+
+.section-form .form__row--center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .section-form .form__row--submit {
@@ -987,6 +999,10 @@ br {
         margin-bottom:30px
     }
 
+    .modal .form__row--center {
+        width: 100%;
+    }
+
     .modal .form__row--submit {
         width:100%;
         margin-bottom:0
@@ -1021,6 +1037,10 @@ br {
     .section-form .form__row--textarea {
         width:100%;
         margin-bottom:30px
+    }
+
+    .section-form .form__row--center {
+        width: 100%;
     }
 
     .section-form .form__row--submit {

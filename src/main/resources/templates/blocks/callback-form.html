@@ -45,10 +45,13 @@
             <textarea class="form-textarea" name="message" id="message" th:field="*{message}"></textarea>
             <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
         </div>
+
+        <div class="form__row form__row--center">
+            <div class="g-recaptcha" data-sitekey="6Le5SXslAAAAAFLLCxXeknKc6B4qEt93XXVe3rVl"></div>
+        </div>
+        
         <div class="form__row form__row--submit">
-            <button type="submit" class="form-submit">
-                Відправити запит
-            </button>
+            <input type="submit" class="form-submit" value="Відправити запит"/>
         </div>
     </form>
 </div>

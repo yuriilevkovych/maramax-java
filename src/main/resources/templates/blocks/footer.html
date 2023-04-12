@@ -80,4 +80,21 @@
         var header = document.querySelector('.header');
         header.removeAttribute('style');
     </script>
+    <script>
+        // google recaptcha
+        var forms = document.querySelectorAll('form')
+
+        for (let i = 0; i < forms.length; i += 1) {
+            forms[i].addEventListener('submit', function(e) {
+                // var captchaResponse = e.target.querySelector('#g-recaptcha-response');
+                var captchaResponse = e.target.querySelector('.g-recaptcha-response');
+
+                if (captchaResponse) {
+                    if (!captchaResponse.value) {
+                        e.preventDefault();
+                    }
+                }
+            })
+        }
+    </script>
 </div>

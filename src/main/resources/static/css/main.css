@@ -595,7 +595,8 @@ br {
     text-decoration:none
 }
 
-.modal {
+.modal,
+.loader {
     display:none;
     position:fixed;
     top:0;
@@ -608,6 +609,33 @@ br {
     z-index:22
 }
 
+.loader.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader__inner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    z-index: 23;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .modal__inner {
     width:100%;
     max-width:1010px;
@@ -617,7 +645,8 @@ br {
     background-color:#fff
 }
 
-.modal__overlay {
+.modal__overlay,
+.loader__overlay{
     position:fixed;
     top:0;
     left:0;
@@ -674,6 +703,8 @@ br {
 .modal .form__row--center {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -819,6 +850,8 @@ br {
 .section-form .form__row--center {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -844,6 +877,19 @@ br {
 
 .section-form .form-label--required {
     color:#cd3434
+}
+
+.form-label--error {
+    display: none;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #cd3434 !important;
+}
+
+.form-label--error.show {
+    display: block;
 }
 
 .section-form .form-label--custom {

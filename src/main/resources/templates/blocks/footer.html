@@ -73,6 +73,10 @@
             </div>
         </div>
     </div>
+    <span class="loader">
+        <span class="loader__overlay"></span>
+        <span class="loader__inner"></span>
+    </span>
     <script src="/js/main.min.js"></script>
     <script th:src="${script}"></script>
     <script src="/js/vendor.min.js"></script>
@@ -82,19 +86,37 @@
     </script>
     <script>
         // google recaptcha
+        var loader = document.querySelector('.loader');
         var forms = document.querySelectorAll('form')
+
+        loader.classList.remove('show');
 
         for (let i = 0; i < forms.length; i += 1) {
             forms[i].addEventListener('submit', function(e) {
-                // var captchaResponse = e.target.querySelector('#g-recaptcha-response');
                 var captchaResponse = e.target.querySelector('.g-recaptcha-response');
+                var formLabel = e.target.querySelector('.form-label--error');
+                var inputTel = e.target.querySelector('.js-form-tel');
+
+                if (inputTel.value.indexOf('+38') == -1) {
+                    e.preventDefault();
+                    return false;
+                }
 
                 if (captchaResponse) {
                     if (!captchaResponse.value) {
                         e.preventDefault();
+                        formLabel.classList.add('show');
+                        return false;
                     }
                 }
+
+                loader.classList.add('show');
             })
+        }
+
+        function capcha_filled() {
+            var formLabel = document.querySelector('.form-label--error.show');
+            formLabel.classList.remove('show');
         }
     </script>
 </div>

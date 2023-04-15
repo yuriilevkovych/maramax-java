@@ -11,6 +11,8 @@
             <input type="submit" value="Update product">
         </form>
 
+        <a th:href="@{/admin/product/delete/{id}(id=${product.id})}">Delete</a>
+
         <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
     </body>
 </html>

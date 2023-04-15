@@ -48,8 +48,8 @@ public class ProductAdminService {
 
     public Product update(Product product, MultipartFile file) throws IOException {
         if (file != null && !file.getOriginalFilename().isEmpty()) {
-            Product oldProduct = this.productRepository.findById(product.getId()).get();
-            this.deleteImage(oldProduct);
+            Product productWithOldImage = this.productRepository.findById(product.getId()).get();
+            this.deleteImage(productWithOldImage);
             product = this.setProductImage(file, product);
         }
 
@@ -67,7 +67,7 @@ public class ProductAdminService {
             }
 
             String uuidFile = UUID.randomUUID().toString();
-            String resultFilename =  "/img/maramax-images-compressed/"+ product.getType() + "/" + uuidFile + "." + file.getOriginalFilename();
+            String resultFilename =  "/img/maramax-images-compressed/"+ product.getType() + "/" + uuidFile + "-" + file.getOriginalFilename();
             file.transferTo(new File(this.uploadPath + resultFilename));
             product.setImg_path(resultFilename);
         }

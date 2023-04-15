@@ -23,9 +23,9 @@ public class CallbackService {
                 callback.getMessage()
         );
 
-        mailSenderService.sendEmail("yu.destroyer.ok@gmail.com", "Callback form Maramax", message);
+        mailSenderService.sendEmail("yu.destroyer.ok@gmail.com", "Заявка на зворотній звязок", message);
 //        mailSenderService.sendEmail("office@maramax.kiev.ua", "Callback form Maramax", message);
-//        mailSenderService.sendEmail("m.kysilov@maramax.kiev.ua", "Callback form Maramax", message);
-//        mailSenderService.sendEmail("a.martynenko@maramax.kiev.ua", "Callback form Maramax", message);
+        mailSenderService.sendEmail("m.kysilov@maramax.kiev.ua", "Заявка на зворотній звязок", message);
+        mailSenderService.sendEmail("a.martynenko@maramax.kiev.ua", "Заявка на зворотній звязок", message);
     }
 }

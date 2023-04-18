@@ -15,6 +15,8 @@
  */
 package com.maramax.service;
 
+import com.anyascii.AnyAscii;
+
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.Locale;
@@ -22,19 +24,9 @@ import java.util.regex.Pattern;
 
 /**
  * It converts a string to a "slug".
- * <p/>
- * Original implementation at <http://www.codecodex.com/wiki/Generate_a_url_slug#Java>
  */
 public class SlugService {
-    private static final Pattern NONLATIN = Pattern.compile("[^\\w-]");
-    private static final Pattern WHITESPACE = Pattern.compile("[\\s]");
-    private static final Pattern EDGESDHASHES = Pattern.compile("(^-|-$)");
-
     public static String makeSlug(String input) {
-        String nowhitespace = WHITESPACE.matcher(input).replaceAll("-");
-        String normalized = Normalizer.normalize(nowhitespace, Normalizer.Form.NFD);
-        String slug = NONLATIN.matcher(normalized).replaceAll("");
-        slug = EDGESDHASHES.matcher(slug).replaceAll("");
-        return slug.toLowerCase(Locale.ENGLISH);
+        return AnyAscii.transliterate(input);
     }
 }

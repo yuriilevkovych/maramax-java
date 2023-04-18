@@ -2,30 +2,33 @@
 <html lang="en">
   <body>
   <div th:replace="admin/blocks/header_admin :: header_admin"></div>
-  <a th:href="${'/admin/publication/create'}">create</a>
+  <a th:href="${'/admin/publication/create'}">Створити</a>
 
   <div th:switch="${publications}">
     <h2 th:case="null">No publications yet!</h2>
     <div th:case="*">
-      <h2>Publication</h2>
+      <h2>Публікації</h2>
       <table>
         <thead>
         <tr>
-          <th>title</th>
-          <th>slug</th>
-          <th>description</th>
-          <th>text</th>
+          <th>Заголовок</th>
+<!--          <th>slug</th>-->
+          <th>Опис</th>
+          <th>Контент</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="publication : ${publications}">
-          <td th:text="${publication.title.toLowerCase()}"></td>
+<!--          <td th:text="${publication.title.toLowerCase()}"></td>-->
           <td>
-            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.slug}"></a>
+            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.title.toLowerCase()}"></a>
           </td>
+<!--          <td>-->
+<!--            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.slug}"></a>-->
+<!--          </td>-->
           <td th:text="${publication.description}"></td>
-          <td><a th:href="@{/admin/publication/update/{id}(id=${publication.id})}">Update</a></td>
-          <td><a th:href="@{/admin/publication/delete/{id}(id=${publication.id})}">Delete</a></td>
+          <td><a th:href="@{/admin/publication/update/{id}(id=${publication.id})}">Редагувати</a></td>
+          <td><a th:href="@{/admin/publication/delete/{id}(id=${publication.id})}">видалити</a></td>
         </tr>
         </tbody>
       </table>

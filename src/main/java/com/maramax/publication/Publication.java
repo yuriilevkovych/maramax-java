@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "publication")
+@Table(name = "publication", uniqueConstraints={@UniqueConstraint(columnNames={"slug"})})
 public class Publication {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

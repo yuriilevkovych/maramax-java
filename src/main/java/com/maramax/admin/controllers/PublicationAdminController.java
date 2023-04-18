@@ -2,6 +2,7 @@ package com.maramax.admin.controllers;
 
 import com.maramax.publication.Publication;
 import com.maramax.publication.PublicationRepository;
+import com.maramax.service.SlugService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,7 +38,7 @@ public class PublicationAdminController {
             return "/admin/publication/create";
         }
 
-//        publication.setSlug(SlugService.makeSlug(publication.getTitle()));
+        publication.setSlug(SlugService.makeSlug(publication.getTitle()));
         //Todo slug unique
         publicationRepository.save(publication);
 
@@ -63,6 +64,7 @@ public class PublicationAdminController {
             return "admin/publication/edit";
         }
 
+        publication.setSlug(SlugService.makeSlug(publication.getTitle()));
         publicationRepository.save(publication);
 
         return "redirect:/admin/publication";

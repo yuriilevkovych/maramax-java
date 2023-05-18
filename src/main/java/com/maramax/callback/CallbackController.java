@@ -22,7 +22,7 @@ public class CallbackController {
     @PostMapping("/callback")
     public String validateCaptcha(HttpServletRequest request, Callback callback) {
         ValidationResult result = recaptchaValidator.validate(request);
-        if (result.isSuccess()) {
+        if (result.isSuccess() && callback.getCheck() == 5) {
             callbackService.sendCallbackMessage(callback);
 
             return "redirect:/";

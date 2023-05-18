@@ -6,6 +6,7 @@ public class Callback {
     private String tel;
     private String quantity;
     private String message;
+    private Integer check;
 
     public String getName() {
         return name;
@@ -45,5 +46,13 @@ public class Callback {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Integer getCheck() {
+        return check;
+    }
+
+    public void setCheck(Integer check) {
+        this.check = check;
     }
 }

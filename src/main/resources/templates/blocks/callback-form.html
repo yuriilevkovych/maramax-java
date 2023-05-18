@@ -46,6 +46,14 @@
             <label class="form-label form-label--custom" for="message">Введіть ваше повідомлення</label>
         </div>
 
+        <div class="form__row">
+            <input class="form-input" id="check" name="check" type="text" th:field="*{check}" required>
+            <label class="form-label" for="check">
+                <span class="form-label--required">*</span>
+                Скільки буде два плюс три?
+            </label>
+        </div>
+
         <div class="form__row form__row--center">
             <div class="g-recaptcha" data-sitekey="6Le5SXslAAAAAFLLCxXeknKc6B4qEt93XXVe3rVl" data-callback="capcha_filled"></div>
             <span class="form-label--error">Підтвердіть що Ви не робот</span>

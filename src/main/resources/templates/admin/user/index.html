@@ -14,27 +14,29 @@
 <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 <div class="container">
     <div class="row col-md-10">
-        <h2>List of Registered Users</h2>
+        <h2>Користувачі</h2>
     </div>
 
-    <a th:href="${'/admin/register'}">create</a>
+    <a th:href="${'/admin/register'}">Створити нового користувача</a>
 
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Ім'я</th>
             <th>Email</th>
-            <th>Delete</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each = "user : ${users}">
-            <td th:text = "${user.firstName}"></td>
-            <td th:text = "${user.lastName}"></td>
+            <td th:text = "${user.name}"></td>
             <td th:text = "${user.email}"></td>
             <td>
-                <a th:href="${'/admin/user/delete/' + user.id}">Delete</a>
+                <a th:href="${'/admin/user/' + user.id}">Редагувати</a>
+            </td>
+            <td>
+                <a th:href="${'/admin/user/delete/' + user.id}">Видалити</a>
             </td>
         </tr>
         </tbody>

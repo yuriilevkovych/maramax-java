@@ -20,15 +20,15 @@ public class UserAdminController {
     public String index(Model model){
         model.addAttribute("users", userService.findAllUsers());
 
-        return "/admin/user/index";
+        return "admin/user/index";
     }
 
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") long id, Model model) {
-        this.userService.deleteById(id);
-
-        return "redirect:/admin/user/index";
-    }
+//    @GetMapping("/delete/{id}")
+//    public String delete(@PathVariable("id") long id, Model model) {
+//        this.userService.deleteById(id);
+//
+//        return "redirect:/admin/user/index";
+//    }
 
     @GetMapping("{id}")
     public String update(@PathVariable("id") long id, Model model) {

@@ -14,10 +14,10 @@
 <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 <div class="container">
     <div class="row col-md-10">
-        <h2>Користувачі</h2>
+        <h2>Користувач</h2>
     </div>
 
-    <a th:href="${'/admin/register'}">Створити нового користувача</a>
+<!--    <a th:href="${'/admin/register'}">Створити нового користувача</a>-->
 
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
@@ -25,7 +25,7 @@
             <th>Ім'я</th>
             <th>Email</th>
             <th>Редагувати</th>
-            <th>Видалити</th>
+<!--            <th>Видалити</th>-->
         </tr>
         </thead>
         <tbody>
@@ -35,9 +35,9 @@
             <td>
                 <a th:href="${'/admin/user/' + user.id}">Редагувати</a>
             </td>
-            <td>
-                <a th:href="${'/admin/user/delete/' + user.id}">Видалити</a>
-            </td>
+<!--            <td>-->
+<!--                <a th:href="${'/admin/user/delete/' + user.id}">Видалити</a>-->
+<!--            </td>-->
         </tr>
         </tbody>
     </table>

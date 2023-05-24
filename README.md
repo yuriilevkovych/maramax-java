@@ -1,9 +1,11 @@
 <ul>
     For installing db locally:
+    <li>Install java sdk</li>
+    <li>Fill aplication.properties (with ddl-auto=update)</li>
     <li>Install docker</li>
     <li>docker-compose up -d</li>
     <li>docker exec -it maramax-java-db-1 bash</li>
-    <li>Create db and insert user-admin for auth</li>
+    <li>psql db_name, \c, \d, insert....</li>
     <li>Deploy: ./scripts/deploy.sh</li>
     <li>Logs: tail -f /home/maramax/log.txt</li>
     <li>upload images: scp img.zip root@SERVER_IP:~/updoads</li>

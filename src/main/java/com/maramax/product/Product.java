@@ -22,16 +22,16 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull(message = "Please fill this field...")
+    @NotNull(message = "Будь ласка, заповніть дане поле...")
     @NumberFormat
     private Integer number;
 
-    @NotBlank(message = "Please fill this field...")
-    @Length(max = 255, message = "It is too long...")
+    @NotBlank(message = "Будь ласка, заповніть дане поле...")
+    @Length(max = 255, message = "Занадто довге...")
     private String type;
 
-    @NotBlank(message = "Please fill this field...")
-    @Length(max = 2048, message = "It is too long...")
+    @NotBlank(message = "Будь ласка, заповніть дане поле...")
+    @Length(max = 2048, message = "Занадто довге...")
     private String description;
     private String img_path;
 

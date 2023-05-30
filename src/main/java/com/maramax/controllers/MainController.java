@@ -48,12 +48,4 @@ public class MainController {
 
         return "career";
     }
-
-    @GetMapping("/contact")
-    public String contact(Model model) {
-        model.addAttribute("title", "contact Page");
-        model.addAttribute("style", "/css/contact.css");
-
-        return "contact";
-    }
 }

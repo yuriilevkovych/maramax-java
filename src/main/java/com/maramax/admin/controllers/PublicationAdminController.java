@@ -61,6 +61,7 @@ public class PublicationAdminController {
         if (result.hasErrors()) {
             publication.setId(id);
 
+            //todo fix it, it is wrong
             return "admin/publication/edit";
         }
 

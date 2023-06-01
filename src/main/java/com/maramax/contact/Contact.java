@@ -20,29 +20,23 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
     @Length(max = 255, message = "Занадто довге...")
     private String name;
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
     @Length(max = 255, message = "Занадто довге...")
     private String email;
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
     @Length(max = 255, message = "Занадто довге...")
     private String phone;
 
 
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
     @Length(max = 255, message = "Занадто довге...")
     private String head_name;
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
     @Length(max = 255, message = "Занадто довге...")
     private String head_email;
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
     @Length(max = 255, message = "Занадто довге...")
     private String head_phone;
 }

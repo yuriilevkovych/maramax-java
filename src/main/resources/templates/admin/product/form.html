@@ -1,28 +1,53 @@
+
+
 <div th:fragment="productform">
-    <div>
-        <label for="number">Number</label>
-        <input type="text" id="number" name="number" placeholder="number" th:value="${product.number}">
-        <span th:if="${numberError}" th:text="${numberError}"></span>
-    </div>
+    
+        <h2 class="p-3 display-5">Картка продукту</h2>
+        <div class="form-control">
+            <div class="p-2">
+                <div class="input-group">
+                    <span class="input-group-text">
+                    <label for="number">Номер</label>
+                    </span>
+                    <input class="form-control" type="text" id="number" name="number" placeholder="number" th:value="${product.number}">
+                    <span th:if="${numberError}" th:text="${numberError}"></span>
+                </div>
+            </div>
+            
 
-    <div>
-        <div th:each="type_variant : ${types}">
-            <input type="radio" name="type" placeholder="type" th:value="${type_variant}" th:field="${product.type}">
-            <label th:for="${type_variant}" th:text="${type_variant}"></label>
+            <div class="p-2">
+                <div class="form-control">
+                    <div th:each="type_variant : ${types}">
+                        <input type="radio" name="type" placeholder="type" th:value="${type_variant}" th:field="${product.type}">
+                        <label th:for="${type_variant}" th:text="${type_variant}"></label>
+                    </div>
+                    <span th:if="${typeError}" th:text="${typeError}"></span>
+                </div>
+            </div>
+            
+            <div class="p-2">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <label for="description">Опис</label>
+                    </span>
+                    <textarea name="description" class="form-control" id="description" rows="3" placeholder="description" th:text="${product.description}"></textarea>
+                    <span th:if="${descriptionError}" th:text="${descriptionError}"></span>
+                </div>
+            </div>
+
+            <div class="p-2">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <label for="filename">Зображення</label>
+                    </span>
+                    <div>
+                    <button class="btn btn-outline-secondary" type="button">
+                        <input type="file" class="form-control" name="file" id="filename" >
+                    </button>
+                        <img th:src="${product.img_path}" th:field="${product.img_path}" />
+                        <span th:if="${fileError}" th:text="${fileError}"></span> 
+                    </div>
+                </div>
+            </div>
+ 
         </div>
-        <span th:if="${typeError}" th:text="${typeError}"></span>
-    </div>
-
-    <div>
-        <label for="description">description</label>
-        <textarea name="description" id="description" placeholder="description" th:text="${product.description}"></textarea>
-        <span th:if="${descriptionError}" th:text="${descriptionError}"></span>
-    </div>
-
-    <div>
-        <label for="filename">Image</label>
-        <input type="file" name="file" id="filename">
-        <img th:src="${product.img_path}" th:field="${product.img_path}" />
-        <span th:if="${fileError}" th:text="${fileError}"></span>
-    </div>
-</div>

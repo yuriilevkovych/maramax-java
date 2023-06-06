@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
->
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Змінити пароль</title>
@@ -11,12 +10,13 @@
           crossorigin="anonymous">
 </head>
 <body>
-<div th:replace="admin/blocks/header_admin :: header_admin"></div>
-<div class="container">
-    <div class="row col-md-10">
-        <h2>Редагувати користувача</h2>
-    </div>
+    <div th:replace="admin/blocks/head_admin :: head_admin"></div>
+    <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
+    <div class="container">
+        
+    <h2 class="p-3 display-5">Редагувати користувача</h2>
+       
     <div th:if="${param.success}">
         <div class="alert alert-info">
             Користувача успішно змінено!
@@ -24,21 +24,48 @@
     </div>
 
     <form action="#" th:action="${'/admin/user/' + user.id}" th:object="${user}" method="post">
+        <div class="form-control">
 
-        <label for="name">Ім'я</label>
-        <input type="text" th:field="*{name}" id="name" placeholder="Ім'я">
-        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+            <div class="p-2">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <label for="name" class="col-sm-2 col-form-label">Ім'я</label>
+                    </span>
+                    <input  class="form-control" type="text" th:field="*{name}" id="name" placeholder="Ім'я">
+                    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                </div>
+            </div>
+        
 
-        <label for="email">email</label>
-        <input type="text" th:field="*{email}" id="email" placeholder="email">
-        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+            <div class="p-2">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <label for="email">email</label>
+                    </span>
+                
+                    <input  class="form-control" type="text" th:field="*{email}" id="email" placeholder="email">
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                </div>
+            </div>
 
-        <label for="password">Пароль</label>
-        <input type="text" th:field="*{password}" id="password" placeholder="Пароль">
-        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+            <div class="p-2">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <label for="password">Пароль</label>
+                    </span>
 
-        <input type="submit" value="Зберегти зміни">
+                    <input class="form-control" type="text" th:field="*{password}" id="password" placeholder="Пароль">
+                    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                </div>
+            </div>
+        </div>
+
+         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-secondary" type="button">
+                <input type="submit" value="Зберегти зміни">
+            </button>
+        </div>
     </form>
-</div>
+    </div>
 </body>
 </html>

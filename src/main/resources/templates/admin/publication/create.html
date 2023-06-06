@@ -4,28 +4,59 @@
   <body>
     <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
-    <form action="#" th:action="@{/admin/publication/create}" th:object="${publication}" method="post">
-      <label for="title">Title</label>
-      <input type="text" th:field="*{title}" id="title" placeholder="Title">
-      <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+      <div class="container">
+      <h2 class="p-3 display-5">Нова публікація</h2>
 
-<!--      <label for="slug">slug</label>-->
-<!--      <input type="text" th:field="*{slug}" id="slug" placeholder="slug">-->
-<!--      <span th:if="${#fields.hasErrors('slug')}" th:errors="*{slug}"></span>-->
+        <form action="#" th:action="@{/admin/publication/create}" th:object="${publication}" method="post">
+          <div class="form-control">
 
-      <label for="description">description</label>
-      <input type="text" th:field="*{description}" id="description" placeholder="description">
-      <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+            <div class="p-2">
+              <div class="input-group">
+                <span class="input-group-text">
+                  <label for="title">Заголовок</label>
+                </span>
+                <input  class="form-control" type="text" th:field="*{title}" id="title" placeholder="Title">
+                <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+              </div>
+            </div>
 
-      <div class="form-group">
-        <label for="summernote-input">text:</label>
-        <textarea type="text" rows="4" id="summernote-input" placeholder="text" class="form-control"
-                  th:field="*{text}" autocomplete="off"></textarea>
-        <span th:if="${#fields.hasErrors('text')}" th:errors="*{text}"></span>
+    <!--      <label for="slug">slug</label>-->
+    <!--      <input type="text" th:field="*{slug}" id="slug" placeholder="slug">-->
+    <!--      <span th:if="${#fields.hasErrors('slug')}" th:errors="*{slug}"></span>-->
+            <div class="p-2">
+              <div class="input-group">
+                <span class="input-group-text">
+                  <label for="description">Опис</label>
+                </span>
+                <input class="form-control" type="text" th:field="*{description}" id="description" placeholder="description">
+                <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+              </div>
+            </div>
+
+            
+          <div class="form-group">
+            <div class="p-2">
+              <div class="input-group">
+                <span class="input-group-text">
+                  <label for="summernote-input">Контент</label>
+                </span>
+                <div class="form-control">
+                  <textarea  type="text" rows="4" id="summernote-input" placeholder="text" class="form-control"
+                            th:field="*{text}" autocomplete="off"></textarea>
+                  <span th:if="${#fields.hasErrors('text')}" th:errors="*{text}"></span>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
 
-      <input type="submit" value="Create Publication">
-    </form>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-secondary" type="button">
+              <input type="submit" value="Зберегти зміни">
+            </button>
+          </div>
+        </form>
+      </div>
 
     <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
   </body>

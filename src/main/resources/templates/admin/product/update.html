@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <div th:replace="admin/blocks/head_admin :: head_admin"></div>
     <body>
         <div th:replace="admin/blocks/header_admin :: header_admin"></div>
+        <div th:replace="admin/blocks/head_admin :: head_admin"></div>
 
-        <form action="#" th:action="${'/admin/product/' + product.id}" th:object="${product}" enctype="multipart/form-data"
-              method="post">
-            <div th:replace="admin/product/form :: productform"></div>
+        <div class="container p-4">
 
-            <input type="submit" value="Update product">
-        </form>
+            <form action="#" th:action="${'/admin/product/' + product.id}" th:object="${product}" enctype="multipart/form-data"
+                method="post">
+                <div th:replace="admin/product/form :: productform"></div>
 
-        <a th:href="@{/admin/product/delete/{id}(id=${product.id})}">Delete</a>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <input type="submit" value="Зберегти зміни">
+                    </button>
+                   
+                    <a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger">Видалити</a>
+                </div>
+            </form>
 
-        <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+            <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+        </div>
     </body>
 </html>

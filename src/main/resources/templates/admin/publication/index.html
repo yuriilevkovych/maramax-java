@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
+  <div th:replace="admin/blocks/head_admin :: head_admin"></div>
   <div th:replace="admin/blocks/header_admin :: header_admin"></div>
-  <a th:href="${'/admin/publication/create'}">Створити</a>
 
   <div th:switch="${publications}">
     <h2 th:case="null">No publications yet!</h2>
     <div th:case="*">
-      <h2>Публікації</h2>
-      <table>
-        <thead>
-        <tr>
-          <th>Заголовок</th>
-<!--          <th>slug</th>-->
-          <th>Опис</th>
-          <th>Контент</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="publication : ${publications}">
-<!--          <td th:text="${publication.title.toLowerCase()}"></td>-->
-          <td>
-            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.title.toLowerCase()}"></a>
-          </td>
-<!--          <td>-->
-<!--            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.slug}"></a>-->
-<!--          </td>-->
-          <td th:text="${publication.description}"></td>
-          <td><a th:href="@{/admin/publication/update/{id}(id=${publication.id})}">Редагувати</a></td>
-          <td><a th:href="@{/admin/publication/delete/{id}(id=${publication.id})}">видалити</a></td>
-        </tr>
-        </tbody>
-      </table>
+      <div class="container">
+        <h2 class="p-3 display-4">Публікації</h2>
+        <div class="d-grid d-md-flex justify-content-md-end">
+          <a th:href="${'/admin/publication/create'}" class="btn btn-primary btn-secondary btn-lg">Створити</a>
+        </div>
+        <div class="row">
+          <div class="col-12">
+              <table class="table table-bordered table-striped" style="margin-top:20px;">
+                <thead>
+                <tr>
+                  <th>Заголовок</th>
+        <!--          <th>slug</th>-->
+                  <th>Опис</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="publication : ${publications}">
+        <!--          <td th:text="${publication.title.toLowerCase()}"></td>-->
+                  <td>
+                    <a class="btn btn-secondary "  th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.title.toLowerCase()}"></a>
+                  </td>
+        <!--          <td>-->
+        <!--            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.slug}"></a>-->
+        <!--          </td>-->
+                  <td th:text="${publication.description}"></td>
+                  <td><a th:href="@{/admin/publication/update/{id}(id=${publication.id})}" class="btn btn-primary" data-bs-toggle="modal"> Edit </a> </td>
+                  <td><a th:href="@{/admin/publication/delete/{id}(id=${publication.id})}" class="btn btn-danger" data-bs-toggle="modal">Delete</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </body>

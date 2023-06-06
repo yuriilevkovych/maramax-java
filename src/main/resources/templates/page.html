@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div th:replace="blocks/head :: head"></div>
+  <body>
+    <div th:replace="blocks/header :: header"></div>
+
+    <main class="main" th:each="page : ${page}">
+      <section class="intro">
+        <div class="container">
+          <div class="inner">
+            <h1 class="section-title main-title" th:text="${page.title}"></h1>
+          </div>
+        </div>
+      </section>
+      <section class="features features-top">
+        <div class="content-container">
+          <div class="content">
+            <div class="container">
+              <div class="section-column" th:utext="${page.content}"></div>
+              <div class="section-column section-column--form section-form" th:insert="blocks/callback-form :: callback"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" th:insert="blocks/footer :: footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+  <div th:replace="admin/blocks/header_admin :: header_admin"></div>
+
+  <div th:switch="${contacts}">
+    <h2 th:case="null">No contacts yet!</h2>
+    <div th:case="*">
+      <h2>Контакти</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Назва відділу</th>
+          <th>Операції</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contact : ${contacts}">
+          <td>
+            <span th:text="${contact.name}"></span>
+          </td>
+          <td><a th:href="@{/admin/contact/{id}(id=${contact.id})}">Редагувати</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </body>
+</html>

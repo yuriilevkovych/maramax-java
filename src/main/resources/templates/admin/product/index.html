@@ -29,9 +29,9 @@
                         <td th:text="${product.number}"></td>
                         <td><a class="btn btn-outline-secondary" th:href="@{/products/{type}(type=${product.type.toLowerCase()})}" th:text="${product.type.toLowerCase()}"></a></td>
                         <td th:text="${product.description}"></td>
-                        <td><a th:href="@{/admin/product/{id}(id=${product.id})}" class="btn btn-primary btn-sm" data-bs-toggle="modal">Edit</a>
+                        <td><a th:href="@{/admin/product/{id}(id=${product.id})}" class="btn btn-primary btn-sm" data-bs-toggle="modal">Редагувати</a>
                         </a></td>
-                        <td><a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger btn-sm" data-bs-toggle="modal">Delete</a></td>
+                        <td><a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger btn-sm" data-bs-toggle="modal">Видалити</a></td>
                       </tr>
                       </tbody>
                   </table>

@@ -33,13 +33,6 @@ public class ProductAdminController {
         return "admin/product/create";
     }
 
-    @GetMapping("test")
-    public String test(Product product, Model model) {
-        model.addAttribute("types", Product.Types.values());
-
-        return "admin/product/newstyle";
-    }
-
     @PostMapping("create")
     public String create(@Valid Product product,
                         BindingResult bindingResult,

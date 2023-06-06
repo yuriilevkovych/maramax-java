@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="admin/blocks/head_admin :: head_admin"></div>
+<body>
+    <div th:replace="admin/blocks/header_admin :: header_admin"></div>
+
+    <form method="POST" th:action="@{/admin/contact/{id}(id=${contact.getId()})}" th:object="${contact}">
+        <label for="name">Назва відділу</label>
+        <input type="text" th:field="*{name}" id="name" placeholder="Назва відділу">
+        <span th:if="${#fields.hasErrors('name')}" style="color:red" th:errors="*{name}"></span>
+
+         <label for="email">Email</label>
+        <input type="text" th:field="*{email}" id="email" placeholder="Email">
+        <span th:if="${#fields.hasErrors('email')}" style="color:red" th:errors="*{email}"></span>
+
+         <label for="phone">Телефон</label>
+        <input type="text" th:field="*{phone}" id="phone" placeholder="Телефон">
+        <span th:if="${#fields.hasErrors('phone')}" style="color:red" th:errors="*{phone}"></span>
+
+         <label for="head_name">Керівник відділу</label>
+        <input type="text" th:field="*{head_name}" id="head_name" placeholder="Керівник відділу">
+        <span th:if="${#fields.hasErrors('head_name')}" style="color:red" th:errors="*{head_name}"></span>
+
+         <label for="head_email">Email Керівника відділу</label>
+        <input type="text" th:field="*{head_email}" id="head_email" placeholder="Email Керівника відділу">
+        <span th:if="${#fields.hasErrors('head_email')}" style="color:red" th:errors="*{head_email}"></span>
+
+         <label for="head_phone">Телефон керівника відділу</label>
+        <input type="text" th:field="*{head_phone}" id="head_phone" placeholder="Телефон керівника відділу">
+        <span th:if="${#fields.hasErrors('head_phone')}" style="color:red" th:errors="*{head_phone}"></span>
+
+        <input type="submit" value="Зберегти зміни">
+    </form>
+
+    <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+</body>
+</html>

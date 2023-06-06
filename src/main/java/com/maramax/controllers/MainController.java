@@ -40,20 +40,13 @@ public class MainController {
         return "about";
     }
 
-    @GetMapping("/career")
+    //Todo delete it
+    @GetMapping("/career_old")
     public String career(Model model) {
-        model.addAttribute("title", "Career Page");
+        model.addAttribute("title", "Career Old Page");
         model.addAttribute("style", "/css/vacancies.css");
         model.addAttribute("script", "/js/vacancies.min.js");
 
-        return "career";
-    }
-
-    @GetMapping("/contact")
-    public String contact(Model model) {
-        model.addAttribute("title", "contact Page");
-        model.addAttribute("style", "/css/contact.css");
-
-        return "contact";
+        return "career_old";
     }
 }

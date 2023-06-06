@@ -18,46 +18,17 @@
       <section class="intro">
         <div class="container">
           <div class="cards">
-
-            <div class="card">
-              <h2 class="card-title">Логістика та постачання</h2>
-              <p class="card-link">o.nesterchuk@maramax.kiev.ua</p>
-              <a href="tel:+38-097-005-20-20" class="card-tel">+38 (097) 005-20-20</a>
-              
-              <br/>
-
-              <span class="card-title-name">
-                Мартиненко Оксана
-              </span>
-
-              <a href="tel:+38-097-036-85-90" class="card-tel">+38 (097) 036-85-90</a>
-            </div>
-
-            <div class="card">
-              <h2 class="card-title">Бухгалтерія</h2>
-              <p class="card-link">maramax@bigmir.net</p>
-              <a href="tel:+38-044-276-25-25" class="card-tel">+38 (044) 276-25-25</a>
-            </div>
-
-            <div class="card">
-              <h2 class="card-title">Відділ кадрів</h2>
-                <p class="card-link">o.ostrova@maramax.kiev.ua</p>
-                <a href="tel:+38-067-507-65-15" class="card-tel">+38 (067) 507-65-15</a>
-            </div>
-
-            <div class="card">
-              <h2 class="card-title">Комерційний відділ</h2>
-              <p class="card-link">office@maramax.kiev.ua</p>
-              <a href="tel:+38-097-005-20-20" class="card-tel">+38 (097) 005-20-20</a>
+            <div class="card" th:each="contact : ${contacts}">
+              <h2 class="card-title" th:text="${contact.name}"></h2>
+              <p class="card-link" th:text="${contact.email}"></p>
+              <a th:href="${'tel:' + contact.phone}" class="card-tel" th:text="${contact.phone}"></a>
 
               <br/>
 
-              <span class="card-title-name">
-                Кисільов Максим - керівник відділу збуту
-              </span>
+              <span class="card-title-name" th:text="${contact.head_name}"></span>
 
-              <p class="card-link">m.kysilov@maramax.kiev.ua</p>
-              <a href="tel:+38-067-400-08-52" class="card-tel">+38 (067) 400-08-52</a>
+              <p class="card-link" th:text="${contact.head_email}"></p>
+              <a th:href="${'tel:' + contact.head_phone}" class="card-tel" th:text="${contact.head_phone}"></a>
             </div>
           </div>
         </div>

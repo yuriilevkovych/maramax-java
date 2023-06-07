@@ -4,36 +4,41 @@
   <body>
     <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
-    <div class="container">
-      <a th:href="${'/admin/product/create'}">Створити</a>
-
-      <div th:switch="${products}">
-        <h2 th:case="null">No products yet!</h2>
+    <div th:switch="${products}">
+      <h2 th:case="null">No products yet!</h2>
         <div th:case="*">
-          <h2>Продукція</h2>
-          <table class="table table-striped">
-            <thead>
-            <tr>
-              <th scope="col">Айді</th>
-              <th scope="col">Код</th>
-              <th scope="col">Тип</th>
-              <th scope="col">Опис</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="product : ${products}">
-              <td th:text="${product.id}"></td>
-              <td th:text="${product.number}"></td>
-              <td><a th:href="@{/products/{type}(type=${product.type.toLowerCase()})}" th:text="${product.type.toLowerCase()}"></a></td>
-              <td th:text="${product.description}"></td>
-              <td><a th:href="@{/admin/product/{id}(id=${product.id})}" class="btn btn-outline-primary">Редагувати</a></td>
-              <td><a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-outline-danger">Видалити</a></td>
-            </tr>
-            </tbody>
-          </table>
+          <div class="container">
+            <h2 class="p-3 display-4">Продукція</h2>
+            <div class="d-grid d-md-flex justify-content-md-end">
+              <a th:href="${'/admin/product/create'}" class="btn btn-primary btn-secondary btn-lg" >Створити</a>
+            </div>
+                <div class="row">
+                  <div class="col-12">
+                    <table  class="table table-bordered table-striped" style="margin-top:20px;">
+                      <thead>
+                      <tr>
+                        <th>Айді</th>
+                        <th>Код</th>
+                        <th>Тип</th>
+                        <th>Опис</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr th:each="product : ${products}">
+                        <td th:text="${product.id}"></td>
+                        <td th:text="${product.number}"></td>
+                        <td><a class="btn btn-outline-secondary" th:href="@{/products/{type}(type=${product.type.toLowerCase()})}" th:text="${product.type.toLowerCase()}"></a></td>
+                        <td th:text="${product.description}"></td>
+                        <td><a th:href="@{/admin/product/{id}(id=${product.id})}" class="btn btn-primary btn-sm" data-bs-toggle="modal">Редагувати</a>
+                        </a></td>
+                        <td><a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger btn-sm" data-bs-toggle="modal">Видалити</a></td>
+                      </tr>
+                      </tbody>
+                  </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
   </body>
 </html>

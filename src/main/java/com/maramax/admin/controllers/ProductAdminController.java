@@ -53,26 +53,6 @@ public class ProductAdminController {
         }
     }
 
-    @PostMapping("{id}")
-    public String postUpdate(@PathVariable(value = "id") Long id,
-                             @Valid Product product,
-                             BindingResult bindingResult,
-                             Model model,
-                             @RequestParam("file") MultipartFile file) throws IOException {
-        if (bindingResult.hasErrors()) {
-            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
-            model.mergeAttributes(errorsMap);
-            model.addAttribute("product", product);
-            model.addAttribute("types", Product.Types.values());
-
-            return "/admin/product/" + id;
-        } else {
-            product = this.productAdminService.update(product, file);
-
-            return "redirect:/admin/product/" + product.getId() + "?update_success";
-        }
-    }
-
     @GetMapping("{id}")
     public String getUpdate(@PathVariable(value = "id") Long id, Model model) {
         Product product = productAdminService.findById(id).get();
@@ -82,7 +62,30 @@ public class ProductAdminController {
         return "admin/product/update";
     }
 
-    //todo method to DELETE
+    //Todo change from post to patch
+    //Todo after changing type of product, save picture to right folder
+    @PostMapping("{id}")
+    public String update(
+                             @Valid Product product,
+                             BindingResult bindingResult,
+                             @PathVariable(value = "id") Long id,
+                             Model model,
+                             @RequestParam("file") MultipartFile file) throws IOException {
+        if (bindingResult.hasErrors()) {
+            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
+            model.mergeAttributes(errorsMap);
+            model.addAttribute("product", product);
+            model.addAttribute("types", Product.Types.values());
+
+            return "/admin/product/update";
+        } else {
+            product = this.productAdminService.update(product, file);
+
+            return "redirect:/admin/product/" + product.getId() + "?update_success";
+        }
+    }
+
+    //Todo method to DELETE
     @GetMapping("delete/{id}")
     public String delete(@PathVariable("id") long id, Model model) {
         Product product = productAdminService.findById(id)

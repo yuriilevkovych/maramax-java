@@ -9,6 +9,13 @@
         <div th:case="*">
           <div class="container">
             <h2 class="p-3 display-4">Продукція</h2>
+
+            <div th:if="${param.delete_success}">
+              <div class="alert alert-info">
+                Продукт видалено!
+              </div>
+            </div>
+
             <div class="d-grid d-md-flex justify-content-md-end">
               <a th:href="${'/admin/product/create'}" class="btn btn-primary btn-secondary btn-lg" >Створити</a>
             </div>

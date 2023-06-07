@@ -1,53 +1,68 @@
-
-
 <div th:fragment="productform">
-    
-        <h2 class="p-3 display-5">Картка продукту</h2>
-        <div class="form-control">
-            <div class="p-2">
-                <div class="input-group">
+
+    <h2 class="p-3 display-5">Редагування продукту</h2>
+
+    <div th:if="${param.create_success}">
+        <div class="alert alert-info">
+            Продукт створено!
+        </div>
+    </div>
+
+    <div th:if="${param.update_success}">
+        <div class="alert alert-info">
+            Продукт змінено!
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="p-2">
+            <div class="input-group">
                     <span class="input-group-text">
                     <label for="number">Номер</label>
                     </span>
-                    <input class="form-control" type="text" id="number" name="number" placeholder="number" th:value="${product.number}">
-                    <span th:if="${numberError}" th:text="${numberError}"></span>
-                </div>
+                <input class="form-control" type="text" id="number" name="number" placeholder="number"
+                       th:value="${product.number}">
+                <span th:if="${numberError}" th:text="${numberError}"></span>
             </div>
-            
+        </div>
 
-            <div class="p-2">
-                <div class="form-control">
-                    <div th:each="type_variant : ${types}">
-                        <input type="radio" name="type" placeholder="type" th:value="${type_variant}" th:field="${product.type}">
-                        <label th:for="${type_variant}" th:text="${type_variant}"></label>
-                    </div>
-                    <span th:if="${typeError}" th:text="${typeError}"></span>
+
+        <div class="p-2">
+            <div class="form-control">
+                <div th:each="type_variant : ${types}">
+                    <input type="radio" name="type" placeholder="type" th:value="${type_variant}"
+                           th:field="${product.type}">
+                    <label th:for="${type_variant}" th:text="${type_variant}"></label>
                 </div>
+                <span th:if="${typeError}" th:text="${typeError}"></span>
             </div>
-            
-            <div class="p-2">
-                <div class="input-group">
+        </div>
+
+        <div class="p-2">
+            <div class="input-group">
                     <span class="input-group-text">
                         <label for="description">Опис</label>
                     </span>
-                    <textarea name="description" class="form-control" id="description" rows="3" placeholder="description" th:text="${product.description}"></textarea>
-                    <span th:if="${descriptionError}" th:text="${descriptionError}"></span>
-                </div>
+                <textarea name="description" class="form-control" id="description" rows="3" placeholder="description"
+                          th:text="${product.description}"></textarea>
+                <span th:if="${descriptionError}" th:text="${descriptionError}"></span>
             </div>
+        </div>
 
-            <div class="p-2">
-                <div class="input-group">
+        <div class="p-2">
+            <div class="input-group">
                     <span class="input-group-text">
                         <label for="filename">Зображення</label>
                     </span>
-                    <div>
+                <div>
                     <button class="btn btn-outline-secondary" type="button">
-                        <input type="file" class="form-control" name="file" id="filename" >
+                        <input type="file" class="form-control" name="file" id="filename">
                     </button>
-                        <img th:src="${product.img_path}" th:field="${product.img_path}" />
-                        <span th:if="${fileError}" th:text="${fileError}"></span> 
-                    </div>
+                    <img th:src="${product.img_path}" th:field="${product.img_path}"/>
+                    <span th:if="${fileError}" th:text="${fileError}"></span>
                 </div>
             </div>
- 
         </div>
+
+    </div>
+</div>

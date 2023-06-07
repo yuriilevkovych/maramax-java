@@ -47,9 +47,9 @@ public class ProductAdminController {
 
             return "/admin/product/create";
         } else {
-            productAdminService.create(product, file);
+            product = productAdminService.create(product, file);
 
-            return "redirect:/admin/product";
+            return "redirect:/admin/product/" + product.getId() + "?create_success";
         }
     }
 
@@ -67,9 +67,9 @@ public class ProductAdminController {
 
             return "/admin/product/" + id;
         } else {
-            this.productAdminService.update(product, file);
+            product = this.productAdminService.update(product, file);
 
-            return "redirect:/admin/product/" + id;
+            return "redirect:/admin/product/" + product.getId() + "?update_success";
         }
     }
 
@@ -82,6 +82,7 @@ public class ProductAdminController {
         return "admin/product/update";
     }
 
+    //todo method to DELETE
     @GetMapping("delete/{id}")
     public String delete(@PathVariable("id") long id, Model model) {
         Product product = productAdminService.findById(id)
@@ -90,6 +91,6 @@ public class ProductAdminController {
         //Todo check this and if file have not deleted, show error
         productAdminService.delete(product);
 
-        return "redirect:/admin/product";
+        return "redirect:/admin/product" + "?delete_success";
     }
 }

@@ -10,6 +10,7 @@
     <li>Logs: tail -f /home/maramax/log.txt</li>
     <li>upload images: scp img.zip root@SERVER_IP:~/updoads</li>
     <li>To see Log: tail -f /home/maramax/log.txt</li>
+    <li>certbot certificates</li>
 </ul>
 
 <h2>Authorization:</h2>

@@ -5,7 +5,7 @@
   <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
   <div th:switch="${publications}">
-    <h2 th:case="null">No publications yet!</h2>
+    <h2 th:case="null">Немає публикацій!</h2>
     <div th:case="*">
       <div class="container">
         <h2 class="p-3 display-4">Публікації</h2>
@@ -32,8 +32,8 @@
         <!--            <a th:href="@{/publication/{slug}(slug=${publication.slug})}" th:text="${publication.slug}"></a>-->
         <!--          </td>-->
                   <td th:text="${publication.description}"></td>
-                  <td><a th:href="@{/admin/publication/update/{id}(id=${publication.id})}" class="btn btn-primary" data-bs-toggle="modal"> Edit </a> </td>
-                  <td><a th:href="@{/admin/publication/delete/{id}(id=${publication.id})}" class="btn btn-danger" data-bs-toggle="modal">Delete</a></td>
+                  <td><a th:href="@{/admin/publication/update/{id}(id=${publication.id})}" class="btn btn-primary" data-bs-toggle="modal"> Редагувати </a> </td>
+                  <td><a th:href="@{/admin/publication/delete/{id}(id=${publication.id})}" class="btn btn-danger" data-bs-toggle="modal">Видалити</a></td>
                 </tr>
                 </tbody>
               </table>

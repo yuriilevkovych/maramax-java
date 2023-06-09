@@ -4,34 +4,86 @@
 <body>
     <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
-    <form method="POST" th:action="@{/admin/contact/{id}(id=${contact.getId()})}" th:object="${contact}">
-        <label for="name">Назва відділу</label>
-        <input type="text" th:field="*{name}" id="name" placeholder="Назва відділу">
-        <span th:if="${#fields.hasErrors('name')}" style="color:red" th:errors="*{name}"></span>
+    <div class="container">
+        
+        <h2 class="p-3 display-5">Редагувати контакти</h2>
 
-         <label for="email">Email</label>
-        <input type="text" th:field="*{email}" id="email" placeholder="Email">
-        <span th:if="${#fields.hasErrors('email')}" style="color:red" th:errors="*{email}"></span>
+        <form method="POST" th:action="@{/admin/contact/{id}(id=${contact.getId()})}" th:object="${contact}">
+            <div class="form-control">
 
-         <label for="phone">Телефон</label>
-        <input type="text" th:field="*{phone}" id="phone" placeholder="Телефон">
-        <span th:if="${#fields.hasErrors('phone')}" style="color:red" th:errors="*{phone}"></span>
+                <div class="p-2">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <label for="name" class="col-sm-2 col-form-label">Назва відділу</label>
+                        </span>
+                        <input class="form-control" type="text" th:field="*{name}" id="name" placeholder="Назва відділу">
+                        <span th:if="${#fields.hasErrors('name')}" style="color:red" th:errors="*{name}"></span>
+                    </div>
+                </div>
 
-         <label for="head_name">Керівник відділу</label>
-        <input type="text" th:field="*{head_name}" id="head_name" placeholder="Керівник відділу">
-        <span th:if="${#fields.hasErrors('head_name')}" style="color:red" th:errors="*{head_name}"></span>
+                <div class="p-2">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        </span>
+                        <input class="form-control" type="text" th:field="*{email}" id="email" placeholder="Email">
+                        <span th:if="${#fields.hasErrors('email')}" style="color:red" th:errors="*{email}"></span>
+                    </div>
+                </div>
 
-         <label for="head_email">Email Керівника відділу</label>
-        <input type="text" th:field="*{head_email}" id="head_email" placeholder="Email Керівника відділу">
-        <span th:if="${#fields.hasErrors('head_email')}" style="color:red" th:errors="*{head_email}"></span>
+                <div class="p-2">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <label for="phone" class="col-sm-2 col-form-label">Телефон</label>
+                        </span>
+                        <input class="form-control" type="text" th:field="*{phone}" id="phone" placeholder="Телефон">
+                        <span th:if="${#fields.hasErrors('phone')}" style="color:red" th:errors="*{phone}"></span>
+                    </div>
+                </div>
 
-         <label for="head_phone">Телефон керівника відділу</label>
-        <input type="text" th:field="*{head_phone}" id="head_phone" placeholder="Телефон керівника відділу">
-        <span th:if="${#fields.hasErrors('head_phone')}" style="color:red" th:errors="*{head_phone}"></span>
+                <div class="p-2">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <label for="head_name" class="col-sm-2 col-form-label">Керівник відділу</label>
+                        </span>
+                        <input class="form-control" type="text" th:field="*{head_name}" id="head_name" placeholder="Керівник відділу">
+                        <span th:if="${#fields.hasErrors('head_name')}" style="color:red" th:errors="*{head_name}"></span>
+                    </div>
+                </div>
 
-        <input type="submit" value="Зберегти зміни">
-    </form>
+                <div class="p-2">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <label for="head_email" class="col-sm-2 col-form-label">Email Керівника відділу</label>
+                        </span>
+                        <input class="form-control" type="text" th:field="*{head_email}" id="head_email" placeholder="Email Керівника відділу">
+                        <span th:if="${#fields.hasErrors('head_email')}" style="color:red" th:errors="*{head_email}"></span>
+                    </div>
+                </div>
 
-    <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+                <div class="p-2">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <label for="head_phone" class="col-sm-2 col-form-label">Телефон керівника відділу</label>
+                        </span>
+                        <input class="form-control" type="text" th:field="*{head_phone}" id="head_phone" placeholder="Телефон керівника відділу">
+                        <span th:if="${#fields.hasErrors('head_phone')}" style="color:red" th:errors="*{head_phone}"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <input type="submit" value="Зберегти зміни">
+                    </button>
+                </div>
+            </div>
+
+        </form>
+        
+
+        <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>
+    </div>
 </body>
 </html>

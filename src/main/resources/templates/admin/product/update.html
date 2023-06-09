@@ -10,12 +10,16 @@
                 method="post">
                 <div th:replace="admin/product/form :: productform"></div>
 
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-outline-secondary" type="button">
-                        <input type="submit" value="Зберегти зміни">
-                    </button>
-                   
-                    <a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger">Видалити</a>
+                <div class="p-2">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <div class="col-2" >
+                            <button class="btn btn-outline-success me-md-2" type="button">
+                                <input type="submit" value="Зберегти зміни">
+                            </button>
+                        </div>
+
+                        <a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger">Видалити</a>
+                    </div>
                 </div>
             </form>
 

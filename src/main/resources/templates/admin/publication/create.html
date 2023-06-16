@@ -15,7 +15,7 @@
                 <span class="input-group-text">
                   <label for="title">Заголовок</label>
                 </span>
-                <input  class="form-control" type="text" th:field="*{title}" id="title" placeholder="Title">
+                <input  class="form-control" type="text" th:field="*{title}" id="title" placeholder="Заголовок">
                 <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
               </div>
             </div>
@@ -28,7 +28,7 @@
                 <span class="input-group-text">
                   <label for="description">Опис</label>
                 </span>
-                <input class="form-control" type="text" th:field="*{description}" id="description" placeholder="description">
+                <input class="form-control" type="text" th:field="*{description}" id="description" placeholder="Опис">
                 <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
               </div>
             </div>

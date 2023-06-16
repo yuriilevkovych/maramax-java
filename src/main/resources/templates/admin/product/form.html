@@ -22,9 +22,8 @@
                     <span class="input-group-text">
                     <label for="number">Номер</label>
                     </span>
-                <input class="form-control" type="text" id="number" name="number" placeholder="number"
-                       th:value="${product.number}">
-                <span th:if="${numberError}" th:text="${numberError}"></span>
+                <input class="form-control" type="text" id="number" name="number" th:value="${product.number}">
+                <span th:if="${numberError}" th:text="${numberError}" style="color:red"></span>
             </div>
         </div>
 
@@ -32,11 +31,11 @@
         <div class="p-2">
             <div class="form-control">
                 <div th:each="type_variant : ${types}">
-                    <input type="radio" name="type" placeholder="type" th:value="${type_variant}"
+                    <input type="radio" name="type" th:value="${type_variant}"
                            th:field="${product.type}">
                     <label th:for="${type_variant}" th:text="${type_variant}"></label>
                 </div>
-                <span th:if="${typeError}" th:text="${typeError}"></span>
+                <span th:if="${typeError}" th:text="${typeError}" style="color:red"></span>
             </div>
         </div>
 
@@ -45,9 +44,9 @@
                     <span class="input-group-text">
                         <label for="description">Опис</label>
                     </span>
-                <textarea name="description" class="form-control" id="description" rows="3" placeholder="description"
+                <textarea name="description" class="form-control" id="description" rows="3"
                           th:text="${product.description}"></textarea>
-                <span th:if="${descriptionError}" th:text="${descriptionError}"></span>
+                <span th:if="${descriptionError}" th:text="${descriptionError}" style="color:red"></span>
             </div>
         </div>
 
@@ -61,7 +60,7 @@
                         <input type="file" class="form-control" name="file" id="filename">
                     </button>
                     <img th:src="${product.img_path}" th:field="${product.img_path}"/>
-                    <span th:if="${fileError}" th:text="${fileError}"></span>
+                    <span th:if="${fileError}" th:text="${fileError}" style="color:red"></span>
                 </div>
             </div>
         </div>

@@ -34,18 +34,17 @@ public class ProductAdminController {
     }
 
     @PostMapping("create")
-    public String create(@Valid Product product,
+    public String create(@ModelAttribute("product") @Valid Product product,
                         BindingResult bindingResult,
                         Model model,
                         @RequestParam("file") MultipartFile file) throws IOException {
 
         if (bindingResult.hasErrors()) {
-            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
-            model.mergeAttributes(errorsMap);
+            model.mergeAttributes(ControllerUtils.getErrors(bindingResult));
             model.addAttribute("product", product);
             model.addAttribute("types", Product.Types.values());
 
-            return "/admin/product/create";
+            return "admin/product/create";
         } else {
             product = productAdminService.create(product, file);
 
@@ -65,24 +64,22 @@ public class ProductAdminController {
     //Todo change from post to patch
     //Todo after changing type of product, save picture to right folder
     @PostMapping("{id}")
-    public String update(
-                             @Valid Product product,
+    public String update(@ModelAttribute("product") @Valid Product product,
                              BindingResult bindingResult,
                              @PathVariable(value = "id") Long id,
                              Model model,
                              @RequestParam("file") MultipartFile file) throws IOException {
         if (bindingResult.hasErrors()) {
-            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
-            model.mergeAttributes(errorsMap);
+            model.mergeAttributes(ControllerUtils.getErrors(bindingResult));
             model.addAttribute("product", product);
             model.addAttribute("types", Product.Types.values());
 
-            return "/admin/product/update";
-        } else {
-            product = this.productAdminService.update(product, file);
-
-            return "redirect:/admin/product/" + product.getId() + "?update_success";
+            return "admin/product/update";
         }
+
+        product = this.productAdminService.update(product, file);
+
+        return "redirect:/admin/product/" + product.getId() + "?update_success";
     }
 
     //Todo method to DELETE

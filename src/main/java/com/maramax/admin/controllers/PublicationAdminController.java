@@ -35,7 +35,7 @@ public class PublicationAdminController {
     @PostMapping("create")
     public String create(@Valid Publication publication, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "/admin/publication/create";
+            return "admin/publication/create";
         }
 
         publication.setSlug(SlugService.makeSlug(publication.getTitle()));

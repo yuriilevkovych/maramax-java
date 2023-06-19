@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PublicationRepository extends CrudRepository<Publication, Long> {
     Boolean existsBySlug(String slug);
-    Iterable<Publication> findBySlug(String slug);
+    Iterable<Publication> findBySlugOrderByIdDesc(String slug);
 }

@@ -37,7 +37,7 @@ public class PublicationController {
             return "redirect:/publications";
         }
 
-        model.addAttribute("publication", publicationRepository.findBySlug(slug));
+        model.addAttribute("publication", publicationRepository.findBySlugOrderByIdDesc(slug));
         model.addAttribute("title", "Publication Page");
         model.addAttribute("style", "/css/publications.css");
 

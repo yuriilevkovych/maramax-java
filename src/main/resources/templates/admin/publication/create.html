@@ -16,7 +16,7 @@
                   <label for="title">Заголовок</label>
                 </span>
                 <input  class="form-control" type="text" th:field="*{title}" id="title" placeholder="Заголовок">
-                <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+                <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" style="color: red"></span>
               </div>
             </div>
 
@@ -29,7 +29,7 @@
                   <label for="description">Опис</label>
                 </span>
                 <input class="form-control" type="text" th:field="*{description}" id="description" placeholder="Опис">
-                <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+                <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" style="color: red"></span>
               </div>
             </div>
 
@@ -43,7 +43,7 @@
                 <div class="form-control">
                   <textarea  type="text" rows="4" id="summernote-input" placeholder="text" class="form-control"
                             th:field="*{text}" autocomplete="off"></textarea>
-                  <span th:if="${#fields.hasErrors('text')}" th:errors="*{text}"></span>
+                  <span th:if="${#fields.hasErrors('text')}" th:errors="*{text}" style="color: red"></span>
                 </div>
               </div>
             </div>

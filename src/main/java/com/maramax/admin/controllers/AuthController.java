@@ -23,9 +23,9 @@ public class AuthController {
         this.userService = userService;
     }
 
-    @GetMapping("/admin/index")
+    @GetMapping("/admin")
     public String home(){
-        return "admin/index";
+        return "redirect:/admin/product";
     }
 
     @GetMapping("/admin/register")

@@ -34,42 +34,21 @@ public class ProductAdminController {
     }
 
     @PostMapping("create")
-    public String create(@Valid Product product,
+    public String create(@ModelAttribute("product") @Valid Product product,
                         BindingResult bindingResult,
                         Model model,
                         @RequestParam("file") MultipartFile file) throws IOException {
 
         if (bindingResult.hasErrors()) {
-            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
-            model.mergeAttributes(errorsMap);
+            model.mergeAttributes(ControllerUtils.getErrors(bindingResult));
             model.addAttribute("product", product);
             model.addAttribute("types", Product.Types.values());
 
-            return "/admin/product/create";
+            return "admin/product/create";
         } else {
-            productAdminService.create(product, file);
+            product = productAdminService.create(product, file);
 
-            return "redirect:/admin/product";
-        }
-    }
-
-    @PostMapping("{id}")
-    public String postUpdate(@PathVariable(value = "id") Long id,
-                             @Valid Product product,
-                             BindingResult bindingResult,
-                             Model model,
-                             @RequestParam("file") MultipartFile file) throws IOException {
-        if (bindingResult.hasErrors()) {
-            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
-            model.mergeAttributes(errorsMap);
-            model.addAttribute("product", product);
-            model.addAttribute("types", Product.Types.values());
-
-            return "/admin/product/" + id;
-        } else {
-            this.productAdminService.update(product, file);
-
-            return "redirect:/admin/product/" + id;
+            return "redirect:/admin/product/" + product.getId() + "?create_success";
         }
     }
 
@@ -82,6 +61,28 @@ public class ProductAdminController {
         return "admin/product/update";
     }
 
+    //Todo change from post to patch
+    //Todo after changing type of product, save picture to right folder
+    @PostMapping("{id}")
+    public String update(@ModelAttribute("product") @Valid Product product,
+                             BindingResult bindingResult,
+                             @PathVariable(value = "id") Long id,
+                             Model model,
+                             @RequestParam("file") MultipartFile file) throws IOException {
+        if (bindingResult.hasErrors()) {
+            model.mergeAttributes(ControllerUtils.getErrors(bindingResult));
+            model.addAttribute("product", product);
+            model.addAttribute("types", Product.Types.values());
+
+            return "admin/product/update";
+        }
+
+        product = this.productAdminService.update(product, file);
+
+        return "redirect:/admin/product/" + product.getId() + "?update_success";
+    }
+
+    //Todo method to DELETE
     @GetMapping("delete/{id}")
     public String delete(@PathVariable("id") long id, Model model) {
         Product product = productAdminService.findById(id)
@@ -90,6 +91,6 @@ public class ProductAdminController {
         //Todo check this and if file have not deleted, show error
         productAdminService.delete(product);
 
-        return "redirect:/admin/product";
+        return "redirect:/admin/product" + "?delete_success";
     }
 }

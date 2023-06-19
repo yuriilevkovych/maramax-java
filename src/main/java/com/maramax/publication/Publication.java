@@ -19,16 +19,15 @@ public class Publication {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-//    @NotBlank(message = "Title is mandatory, input english letters without whitespaces")
     @Column(nullable = false, unique = true)
     private String slug;
 
-    @NotBlank(message = "Title is mandatory")
+    @NotBlank(message = "Обовязкове поле")
     private String title;
 
-    @NotBlank(message = "Description is mandatory")
+    @NotBlank(message = "Обовязкове поле")
     private String description;
 
-    @NotBlank(message = "Text is mandatory")
+    @NotBlank(message = "Обовязкове поле")
     private String text;
 }

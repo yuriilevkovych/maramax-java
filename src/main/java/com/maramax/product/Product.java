@@ -26,7 +26,7 @@ public class Product {
     @NumberFormat
     private Integer number;
 
-    @NotBlank(message = "Будь ласка, заповніть дане поле...")
+    @NotBlank(message = "Будь ласка, виберіть категорію...")
     @Length(max = 255, message = "Занадто довге...")
     private String type;
 

@@ -4,29 +4,64 @@
 <body>
     <div th:replace="admin/blocks/header_admin :: header_admin"></div>
 
-    <form method="POST" th:action="@{/admin/page/{id}(id=${page.getId()})}" th:object="${page}">
-        <label for="name">Назва сторінки</label>
-        <input type="text" th:field="*{name}" id="name" placeholder="Назва сторінки">
-        <span th:if="${#fields.hasErrors('name')}" style="color:red" th:errors="*{name}"></span>
+    <div class="container">
+        <h2 class="p-3 display-5">Редагувати сторінку кар'єра</h2>
 
-        <label for="summernote-input">Контент:</label>
-        <textarea type="text" rows="4" id="summernote-input" placeholder="content" class="form-control"
-                  th:field="*{content}" autocomplete="off"></textarea>
-        <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span>
+        <form method="POST" th:action="@{/admin/page/{id}(id=${page.getId()})}" th:object="${page}">
+            <div class="form-control">
+                <div class="p-2">
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <label for="name">Назва сторінки</label>
+                      </span>
+                        <input class="form-control" type="text" th:field="*{name}" id="name" placeholder="Назва сторінки">
+                        <span th:if="${#fields.hasErrors('name')}" style="color:red" th:errors="*{name}"></span>
+                    </div>
+                </div>
 
-        <label for="title">Заголовок</label>
-        <input type="text" th:field="*{title}" id="title" placeholder="Заголовок">
-        <span th:if="${#fields.hasErrors('title')}" style="color:red" th:errors="*{title}"></span>
+                <div class="p-2">
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <label for="summernote-input">Контент:</label>
+                      </span>
+                        <div class="form-control">
+                            <textarea type="text" rows="4" id="summernote-input" placeholder="content" class="form-control"
+                                    th:field="*{content}" autocomplete="off"></textarea>
+                            <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span>
+                        </div>
+                    </div>
+                </div>
 
-        <label for="js_file">Файл скриптів (для розробника)</label>
-        <input type="text" th:field="*{js_file}" id="js_file" placeholder="Заголовок">
-        <span th:if="${#fields.hasErrors('js_file')}" style="color:red" th:errors="*{js_file}"></span>
+                <div class="p-2">
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <label for="title">Заголовок</label>
+                      </span>
+                        <input class="form-control" type="text" th:field="*{title}" id="title" placeholder="Заголовок">
+                        <span th:if="${#fields.hasErrors('title')}" style="color:red" th:errors="*{title}"></span>
+                    </div>
+                </div>
 
-        <label for="css_file">Файл стилів (для розробника)</label>
-        <input type="text" th:field="*{css_file}" id="css_file" placeholder="Заголовок">
-        <span th:if="${#fields.hasErrors('css_file')}" style="color:red" th:errors="*{css_file}"></span>
+                <label for="js_file">Файл скриптів (для розробника)</label>
+                <input type="text" th:field="*{js_file}" id="js_file" placeholder="Заголовок">
+                <span th:if="${#fields.hasErrors('js_file')}" style="color:red" th:errors="*{js_file}"></span>
 
-        <input type="submit" value="Зберегти зміни">
+                <label for="css_file">Файл стилів (для розробника)</label>
+                <input type="text" th:field="*{css_file}" id="css_file" placeholder="Заголовок">
+                <span th:if="${#fields.hasErrors('css_file')}" style="color:red" th:errors="*{css_file}"></span>
+
+            </div>
+
+            <div class="p-2">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-outline-secondary" type="submit">
+                    Зберегти зміни 
+                  </button>
+                </div>
+            </div>
+        
+            <input type="submit" value="Зберегти зміни">
+        </div>
     </form>
 
     <div th:replace="admin/blocks/footer_admin :: footer_admin"></div>

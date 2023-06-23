@@ -20,6 +20,7 @@ public class Page {
     private Long id;
 
     @Length(max = 255, message = "Занадто довге...")
+    @Column(nullable = false, unique = true)
     private String name;
 
     private String content;

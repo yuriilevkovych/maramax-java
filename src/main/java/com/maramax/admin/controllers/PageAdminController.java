@@ -37,6 +37,9 @@ public class PageAdminController {
                          @PathVariable(value = "id") Long id,
                          Model model) {
         if (bindingResult.hasErrors()) {
+                model.mergeAttributes(ControllerUtils.getErrors(bindingResult));
+            model.addAttribute("page", page);
+
             return "admin/page/update";
         }
 

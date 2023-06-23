@@ -211,7 +211,7 @@ html {
     align-items: flex-start;
     }
 
-    .content .section-item__titls {
+    .content h2 {
     font-weight:700;
     font-size:30px;
     line-height:35px;
@@ -266,7 +266,7 @@ html {
     height: 80px;
     }
 
-    .features .list__item {
+    .content ul li {
     margin-bottom: 25px;
     position: relative;
     padding-left: 34px;
@@ -274,7 +274,7 @@ html {
     line-height: 25px;
     }
 
-    .features .list__item::before {
+    .content ul li::before {
     position: absolute;
     content: '';
     width: 14px;

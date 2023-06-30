@@ -1148,6 +1148,11 @@ br {
         padding:0 2px
     }
 
+    .button-scale {
+        transition: .3s;
+        cursor: pointer;
+    }
+
     .button-scale:hover {
         scale: 1.1;
     }

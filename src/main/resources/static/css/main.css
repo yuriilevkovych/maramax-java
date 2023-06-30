@@ -1148,6 +1148,10 @@ br {
         padding:0 2px
     }
 
+    .button-scale:hover {
+        scale: 1.1;
+    }
+
     .header .section-actions .feedback {
         width:auto;
         padding:11px 5px;

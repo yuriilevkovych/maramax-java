@@ -41,4 +41,14 @@ public class Product {
         CARTBOARD,
         CORRUGATED
     }
+
+    public String getTypeTranslate(String type) {
+        switch (type){
+            case "POS_MATERIALS": return "Pos матеріали";
+            case "CORRUGATED": return "З гофрокартону";
+            case "CASHED": return "Каширована";
+            case "CARTBOARD": return "З картону";
+            default: return "Pos матеріали";
+        }
+    }
 }

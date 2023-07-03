@@ -8,6 +8,6 @@ import java.util.List;
 @Repository
 public interface PageRepository extends JpaRepository<Page, Long> {
     List<Page> findAll();
-    Iterable<Page> findByName(String name);
+    Page findByName(String name);
     Boolean existsByName(String name);
 }

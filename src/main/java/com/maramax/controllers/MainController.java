@@ -30,14 +30,15 @@ public class MainController {
         return "home";
     }
 
-    @GetMapping("/about")
+    //Todo delete it
+    @GetMapping("/about_old")
     public String about(Model model) {
         model.addAttribute("uploadPath", uploadPath);
         model.addAttribute("title", "About Page");
         model.addAttribute("style", "/css/about.css");
         model.addAttribute("script", "/js/about.min.js");
 
-        return "about";
+        return "about_old";
     }
 
     //Todo delete it

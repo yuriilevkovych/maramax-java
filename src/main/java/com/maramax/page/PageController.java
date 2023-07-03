@@ -1,6 +1,7 @@
 package com.maramax.page;
 
 import com.maramax.callback.Callback;
+import com.maramax.service.YearsLeadingCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,14 +28,14 @@ public class PageController {
             return "redirect:/";
         }
 
-        Iterable<Page> iteratorPage = this.pageRepository.findByName(name);
-        Page page = iteratorPage.iterator().next();
+        Page page = this.pageRepository.findByName(name);
 
-        model.addAttribute("page", iteratorPage);
+        model.addAttribute("page", page);
         model.addAttribute("title", page.getTitle());
         model.addAttribute("style", page.getCss_file());
         model.addAttribute("script", page.getJs_file());
+        model.addAttribute("yearsLeading", YearsLeadingCalculator.calculate());
 
-        return "page";
+        return name;
     }
 }

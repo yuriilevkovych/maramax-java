@@ -33,7 +33,7 @@
                 <div th:each="type_variant : ${types}">
                     <input type="radio" name="type" th:value="${type_variant}"
                            th:field="${product.type}">
-                    <label th:for="${type_variant}" th:text="${type_variant}"></label>
+                    <label th:for="${type_variant}" th:text="${product.getTypeTranslate(type_variant)}"></label>
                 </div>
                 <span th:if="${typeError}" th:text="${typeError}" style="color:red"></span>
             </div>

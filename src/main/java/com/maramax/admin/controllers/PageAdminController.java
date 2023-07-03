@@ -23,9 +23,9 @@ public class PageAdminController {
         return "admin/page/index";
     }
 
-    @GetMapping("{id}")
-    public String update(@PathVariable("id") long id, Model model) {
-        Page page = pageRepository.findById(id).get();
+    @GetMapping("{name}")
+    public String update(@PathVariable("name") String name, Model model) {
+        Page page = pageRepository.findByName(name);
         model.addAttribute("page", page);
 
         return "admin/page/update";
@@ -45,6 +45,6 @@ public class PageAdminController {
 
         pageRepository.save(page);
 
-        return "redirect:/admin/page/" + id;
+        return "redirect:/admin/page/" + page.getName();
     }
 }

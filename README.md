@@ -1,3 +1,6 @@
+<h1>Maramax</h1>
+ java + posgresgl
+
 <ul>
     For installing db locally:
     <li>Install java sdk</li>
